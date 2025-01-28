@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { H1, Paragraph } from "../ui/components";
+import { H1, Paragraph } from "../../ui/components";
 
 const Section = styled.section`
   display: flex;
