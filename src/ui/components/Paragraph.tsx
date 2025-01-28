@@ -16,13 +16,13 @@ export const Paragraph = styled.p<ParagraphProps>`
   font-size: ${({ size }) => {
     switch (size) {
       case "sm":
-        return "0.875rem";
-      case "md":
         return "1rem";
+      case "md":
+        return "1.1rem";
       case "lg":
-        return "1.125rem";
-      case "xl":
         return "1.25rem";
+      case "xl":
+        return "1.7rem";
       default:
         return "1rem";
     }
