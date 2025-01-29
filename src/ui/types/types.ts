@@ -24,9 +24,7 @@ export type FontWeightOptions = 300 | 400 | 500 | 600;
 
 export const navItems = [
   { path: "/", label: "Home" },
-  { path: "/projects", label: "Projects" },
   { path: "/about", label: "About" },
+  { path: "/projects", label: "Projects" },
   { path: "/contact", label: "Contact" },
 ];
-
-

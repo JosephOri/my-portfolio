@@ -1,4 +1,4 @@
-import { useThemeMode } from "../../../hooks/context/useThemeMode";
+import { useThemeMode } from "../../../context/hooks/useThemeMode";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { NavLink, NavLinks } from "./NavLink.styled";
 import { navItems } from "../../types/types";
