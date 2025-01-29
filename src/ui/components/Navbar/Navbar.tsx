@@ -23,6 +23,26 @@ const Logo = styled.div`
   color: ${({ theme }) => theme.textPrimary};
 `;
 
+const DesktopControls = styled.div`
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const MobileControls = styled.div`
+  display: none;
+  gap: 1rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
+
 const Navbar = () => {
   const { isDarkMode, setIsDarkMode } = useThemeMode();
 
@@ -36,20 +56,32 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo>Ori Yossef</Logo>
+      
       <NavLinks>
         {navItems.map((item) => (
           <NavLink key={item.path} to={item.path}>
             {item.label}
           </NavLink>
         ))}
+        <DesktopControls>
+          <DarkModeToggle
+            checked={isDarkMode}
+            onChange={() => setIsDarkMode((prev) => !prev)}
+            size={55}
+            speed={2}
+          />
+        </DesktopControls>
+      </NavLinks>
+
+      <MobileControls>
         <DarkModeToggle
           checked={isDarkMode}
           onChange={() => setIsDarkMode((prev) => !prev)}
-          size={55}
+          size={45}
           speed={2}
         />
-      </NavLinks>
-      <MobileNav />
+        <MobileNav />
+      </MobileControls>
     </Nav>
   );
 };
