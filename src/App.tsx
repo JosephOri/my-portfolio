@@ -1,8 +1,8 @@
 import Home from "./pages/Home/Home";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./ui/theme/theme";
-import { useThemeMode } from "./hooks/context/useThemeMode";
 import Navbar from "./ui/components/Navbar/Navbar";
+import { useThemeMode } from "./context/hooks/useThemeMode";
 
 const App = () => {
   const { isDarkMode } = useThemeMode();

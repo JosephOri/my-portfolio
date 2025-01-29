@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { AlignOptions, FontWeightOptions, SizeOptions } from "../types/types";
+import {
+  AlignOptions,
+  FontWeightOptions,
+  SizeOptions,
+} from "../../types/types";
 
 interface ParagraphProps {
   color?: string;
