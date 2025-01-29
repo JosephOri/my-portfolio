@@ -1,18 +1,31 @@
-export const theme = {
-  colors: {
-    primary: "#2d3436",
-    accent: "#0d9488",
-    textPrimary: "white ",
-    link: "#2563eb",
-    linkHover: "#1d4ed8",
-  },
-  spacing: {
-    section: "4rem",
-  },
-  breakpoints: {
-    md: "768px",
-    sm: "480px",
-  },
-} as const;
+import { DefaultTheme } from "styled-components";
 
-export type Theme = typeof theme;
+export const lightTheme: DefaultTheme = {
+  body: "#FFFFFF",
+  textPrimary: "#333333",
+  textSecondary: "#666666",
+  primaryColor: "#2563eb",
+  linkColor: "#2563eb",
+  linkHoverColor: "#1d4ed8",
+  cardBg: "#f9f9f9",
+  tagBg: "#e0e0e0",
+  tagText: "#333",
+  inputBorder: "#ccc",
+  buttonBg: "#2563eb",
+  buttonHoverBg: "#1d4ed8",
+};
+
+export const darkTheme: DefaultTheme = {
+  body: "#121212",
+  textPrimary: "#FFFFFF",
+  textSecondary: "#B3B3B3",
+  primaryColor: "#63b3ed",
+  linkColor: "#63b3ed",
+  linkHoverColor: "#4d85bb",
+  cardBg: "#1e1e1e",
+  tagBg: "#333",
+  tagText: "#FFFFFF",
+  inputBorder: "#555",
+  buttonBg: "#63b3ed",
+  buttonHoverBg: "#4d85bb",
+};

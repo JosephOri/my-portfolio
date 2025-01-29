@@ -8,10 +8,10 @@ interface H1Props {
 }
 
 export const H1 = styled.h1<H1Props>`
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   margin: 1rem 0;
-  color: ${(props) => props.color || props.theme.primaryColor || "#2d3436"};
+  color: ${(props) => props.color || props.theme.textPrimary || "#2d3436"};
   text-align: ${(props) => props.align || "left"};
   text-transform: ${(props) => (props.uppercase ? "uppercase" : "none")};
   letter-spacing: -0.05em;
