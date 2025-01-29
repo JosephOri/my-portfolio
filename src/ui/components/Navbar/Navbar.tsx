@@ -11,7 +11,7 @@ const Nav = styled.nav`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 1000;
   transition: all 0.3s ease;
   backdrop-filter: saturate(180%) blur(5px);
 `;
@@ -81,7 +81,7 @@ const Navbar = () => {
         <DarkModeToggle
           checked={isDarkMode}
           onChange={() => setIsDarkMode((prev) => !prev)}
-          size={50}
+          size={55}
           speed={2}
         />
       </NavLinks>
