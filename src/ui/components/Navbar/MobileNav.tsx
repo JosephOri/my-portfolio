@@ -10,16 +10,10 @@ import {
 import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { styled } from "styled-components";
 import { NavLink } from "./NavLink.styled";
+import { navItems } from "../../types/types";
 
 const MobileNav = () => {
   const [open, setOpen] = React.useState(false);
-
-  const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/projects", label: "Projects" },
-    { path: "/about", label: "About" },
-    { path: "/contact", label: "Contact" },
-  ];
 
   return (
     <Root open={open} onOpenChange={setOpen}>
@@ -35,13 +29,13 @@ const MobileNav = () => {
         <DialogContent>
           <div className="flex flex-col space-y-6 p-6">
             {navItems.map((item) => (
-              <NavLink
+              <MobileNavLink
                 key={item.path}
                 to={item.path}
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </NavLink>
+              </MobileNavLink>
             ))}
           </div>
           <Close asChild>
@@ -66,7 +60,26 @@ const HamburgerButton = styled.button`
     border: none;
     cursor: pointer;
     color: ${({ theme }) => theme.textPrimary};
+    transition: transform 0.3s ease;
+
+    &:active {
+      transform: scale(0.9);
+    }
+
+    &[data-state="open"] {
+      transform: rotate(90deg);
+    }
   }
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: ${({ theme }) => theme.textPrimary};
+  background: transparent;
+  border: none;
+  cursor: pointer;
 `;
 
 const DialogOverlay = styled(Overlay)`
@@ -74,6 +87,12 @@ const DialogOverlay = styled(Overlay)`
   backdrop-filter: blur(4px);
   position: fixed;
   inset: 0;
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+
+  &[data-state="open"] {
+    opacity: 1;
+  }
 `;
 
 const DialogContent = styled(Content)`
@@ -86,17 +105,41 @@ const DialogContent = styled(Content)`
   background: ${({ theme }) => theme.navbarBg};
   padding: 1rem;
   box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transform: translateX(100%);
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  &[data-state="open"] {
+    transform: translateX(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 `;
 
-const CloseButton = styled.button`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  color: ${({ theme }) => theme.textPrimary};
-  background: transparent;
-  border: none;
-  cursor: pointer;
+const MobileNavLink = styled(NavLink)`
+  transform: translateX(20px);
+  transition:
+    opacity 300ms ease,
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  &[data-state="open"] & {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:nth-child(1) {
+    transition-delay: 100ms;
+  }
+  &:nth-child(2) {
+    transition-delay: 150ms;
+  }
+  &:nth-child(3) {
+    transition-delay: 200ms;
+  }
+  &:nth-child(4) {
+    transition-delay: 250ms;
+  }
 `;
 
 export default MobileNav;

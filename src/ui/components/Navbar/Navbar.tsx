@@ -1,6 +1,7 @@
 import { useThemeMode } from "../../../hooks/context/useThemeMode";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { NavLink, NavLinks } from "./NavLink.styled";
+import { navItems } from "../../types/types";
 import styled from "styled-components";
 import MobileNav from "./MobileNav";
 
@@ -46,17 +47,9 @@ const MobileControls = styled.div`
 const Navbar = () => {
   const { isDarkMode, setIsDarkMode } = useThemeMode();
 
-  const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/projects", label: "Projects" },
-    { path: "/contact", label: "Contact" },
-  ];
-
   return (
     <Nav>
       <Logo>Ori Yossef</Logo>
-      
       <NavLinks>
         {navItems.map((item) => (
           <NavLink key={item.path} to={item.path}>

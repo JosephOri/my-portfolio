@@ -22,3 +22,11 @@ export type SizeOptions = "sm" | "md" | "lg" | "xl";
 
 export type FontWeightOptions = 300 | 400 | 500 | 600;
 
+export const navItems = [
+  { path: "/", label: "Home" },
+  { path: "/projects", label: "Projects" },
+  { path: "/about", label: "About" },
+  { path: "/contact", label: "Contact" },
+];
+
+
