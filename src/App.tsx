@@ -20,7 +20,6 @@ const App = () => {
           checked={isDarkMode}
           onChange={() => setIsDarkMode((prev) => !prev)}
           size={60}
-          speed={1.3}
         />
         <Home />
       </Container>
