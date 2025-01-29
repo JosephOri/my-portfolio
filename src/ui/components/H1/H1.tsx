@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AlignOptions } from "../types/types";
+import { AlignOptions } from "../../types/types";
 
 interface H1Props {
   color?: string;
