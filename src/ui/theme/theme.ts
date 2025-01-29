@@ -28,4 +28,5 @@ export const darkTheme: DefaultTheme = {
   inputBorder: "#555",
   buttonBg: "#63b3ed",
   buttonHoverBg: "#4d85bb",
+  
 };

@@ -1,28 +1,16 @@
 import Home from "./pages/Home/Home";
-import { useThemeMode } from "./hooks/context/useThemeMode";
-import styled, { ThemeProvider } from "styled-components";
-import DarkModeToggle from "react-dark-mode-toggle";
-
+import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./ui/theme/theme";
+import { useThemeMode } from "./hooks/context/useThemeMode";
+import Navbar from "./ui/components/Navbar/Navbar";
 
 const App = () => {
-  const { isDarkMode, setIsDarkMode } = useThemeMode();
-
-  const Container = styled.div`
-    background-color: ${(props) => props.theme.body};
-    height: 100vh;
-  `;
+  const { isDarkMode } = useThemeMode();
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-      <Container>
-        <DarkModeToggle
-          checked={isDarkMode}
-          onChange={() => setIsDarkMode((prev) => !prev)}
-          size={60}
-        />
-        <Home />
-      </Container>
+      <Navbar />
+      <Home />
     </ThemeProvider>
   );
 };
