@@ -1,19 +1,4 @@
-import { DefaultTheme } from "styled-components";
-
-interface Theme extends DefaultTheme {
-  body: string;
-  textPrimary: string;
-  textSecondary: string;
-  primaryColor: string;
-  linkColor: string;
-  linkHoverColor: string;
-  cardBg: string;
-  tagBg: string;
-  tagText: string;
-  inputBorder: string;
-  buttonBg: string;
-  buttonHoverBg: string;
-}
+import { Theme } from "../types/types";
 
 export const lightTheme: Theme = {
   body: "#FFFFFF",
