@@ -1,6 +1,21 @@
 import { DefaultTheme } from "styled-components";
 
-export const lightTheme: DefaultTheme = {
+interface Theme extends DefaultTheme {
+  body: string;
+  textPrimary: string;
+  textSecondary: string;
+  primaryColor: string;
+  linkColor: string;
+  linkHoverColor: string;
+  cardBg: string;
+  tagBg: string;
+  tagText: string;
+  inputBorder: string;
+  buttonBg: string;
+  buttonHoverBg: string;
+}
+
+export const lightTheme: Theme = {
   body: "#FFFFFF",
   textPrimary: "#333333",
   textSecondary: "#666666",
@@ -15,7 +30,7 @@ export const lightTheme: DefaultTheme = {
   buttonHoverBg: "#1d4ed8",
 };
 
-export const darkTheme: DefaultTheme = {
+export const darkTheme: Theme = {
   body: "#121212",
   textPrimary: "#FFFFFF",
   textSecondary: "#B3B3B3",
@@ -28,5 +43,4 @@ export const darkTheme: DefaultTheme = {
   inputBorder: "#555",
   buttonBg: "#63b3ed",
   buttonHoverBg: "#4d85bb",
-  
 };
