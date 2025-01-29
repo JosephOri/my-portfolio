@@ -19,7 +19,7 @@ export const lightTheme: Theme = {
 export const darkTheme: Theme = {
   body: "#121212",
   navbarBg: "#1a1a1a",
-  textPrimary: "#FFFFFF",
+  textPrimary: "#F5F5F5",
   textSecondary: "#B3B3B3",
   primaryColor: "#63b3ed",
   linkColor: "#63b3ed",
