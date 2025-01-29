@@ -1,7 +1,8 @@
 import { useThemeMode } from "../../../hooks/context/useThemeMode";
 import DarkModeToggle from "react-dark-mode-toggle";
-import { Link } from "react-router-dom";
+import { NavLink, NavLinks } from "./NavLink.styled";
 import styled from "styled-components";
+import MobileNav from "./MobileNav";
 
 const Nav = styled.nav`
   display: flex;
@@ -14,43 +15,6 @@ const Nav = styled.nav`
   z-index: 1000;
   transition: all 0.3s ease;
   backdrop-filter: saturate(180%) blur(5px);
-`;
-
-const NavLinks = styled.div`
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const NavLink = styled(Link)`
-  color: ${({ theme }) => theme.textPrimary};
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  position: relative;
-
-  &:hover {
-    color: ${({ theme }) => theme.primaryColor};
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: ${({ theme }) => theme.primaryColor};
-    transition: width 0.3s ease;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
 `;
 
 const Logo = styled.div`
@@ -85,6 +49,7 @@ const Navbar = () => {
           speed={2}
         />
       </NavLinks>
+      <MobileNav />
     </Nav>
   );
 };
