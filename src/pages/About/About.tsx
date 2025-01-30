@@ -1,12 +1,21 @@
-import { H1 } from "../../ui/components";
+import { H1, Paragraph } from "../../ui/components";
 
 const About = () => {
   return (
-    <div>
-      <H1 size="md" uppercase>
+    <>
+      <H1 className="mb-10" size="md" uppercase>
         let me introduce myself
       </H1>
-    </div>
+      <Paragraph size="sm">Hi Everyone, I am Ori Yossef.</Paragraph>
+      <Paragraph size="sm">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, saepe
+        tempore iusto laudantium facere eius explicabo modi quia minima nam.
+      </Paragraph>
+      <Paragraph size="sm">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum adipisci
+        reprehenderit sequi facere tenetur amet?
+      </Paragraph>
+    </>
   );
 };
 
