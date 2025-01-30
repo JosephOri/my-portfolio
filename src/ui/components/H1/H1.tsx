@@ -12,15 +12,15 @@ export const H1 = styled.h1<H1Props>`
   font-size: ${({ size }) => {
     switch (size) {
       case "sm":
-        return "2rem";
+        return "1.7rem";
       case "md":
-        return "3rem";
+        return "2.6rem";
       case "lg":
-        return "4rem";
+        return "3.6rem";
       case "xl":
-        return "6rem";
+        return "5rem";
       default:
-        return "4rem";
+        return "3.6rem";
     }
   }};
   font-weight: 700;
