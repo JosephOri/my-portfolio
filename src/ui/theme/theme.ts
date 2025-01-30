@@ -1,4 +1,22 @@
-import { Theme } from "../../types/types";
+import { DefaultTheme } from "styled-components";
+
+interface Theme extends DefaultTheme {
+  body: string;
+  navbarBg: string;
+  textPrimary: string;
+  textSecondary: string;
+  primaryColor: string;
+  linkColor: string;
+  linkHoverColor: string;
+  cardBg: string;
+  tagBg: string;
+  tagText: string;
+  inputBorder: string;
+  buttonBg: string;
+  buttonHoverBg: string;
+  success: string;
+  error: string;
+}
 
 export const lightTheme: Theme = {
   body: "#FFFFFF",
@@ -14,6 +32,8 @@ export const lightTheme: Theme = {
   inputBorder: "#ccc",
   buttonBg: "#2563eb",
   buttonHoverBg: "#1d4ed8",
+  success: "#22c55e",
+  error: "#ef4444",
 };
 
 export const darkTheme: Theme = {
@@ -30,4 +50,6 @@ export const darkTheme: Theme = {
   inputBorder: "#555",
   buttonBg: "#63b3ed",
   buttonHoverBg: "#4d85bb",
+  success: "#16a34a",
+  error: "#dc2626",
 };
