@@ -5,63 +5,6 @@ import Section from "../../ui/components/Section";
 import { Button, Loader } from "../../ui/components";
 import styled from "styled-components";
 
-const ContactSection = styled(Section)`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-`;
-
-const InputGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-`;
-
-const Label = styled.label`
-  color: ${({ theme }) => theme.textPrimary};
-  font-weight: 500;
-`;
-
-const Input = styled.input`
-  padding: 0.8rem;
-  border: 1px solid ${({ theme }) => theme.inputBorder};
-  border-radius: 4px;
-  background: ${({ theme }) => theme.cardBg};
-  color: ${({ theme }) => theme.textPrimary};
-  font-size: 1rem;
-  transition: all 0.3s ease;
-
-  &:focus {
-    outline: none;
-    border-color: ${({ theme }) => theme.primaryColor};
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.primaryColor}33;
-  }
-`;
-
-const TextArea = styled.textarea`
-  padding: 0.8rem;
-  border: 1px solid ${({ theme }) => theme.inputBorder};
-  border-radius: 4px;
-  background: ${({ theme }) => theme.cardBg};
-  color: ${({ theme }) => theme.textPrimary};
-  font-size: 1rem;
-  min-height: 150px;
-  resize: vertical;
-  transition: all 0.3s ease;
-
-  &:focus {
-    outline: none;
-    border-color: ${({ theme }) => theme.primaryColor};
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.primaryColor}33;
-  }
-`;
-
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
@@ -158,3 +101,60 @@ const Contact = () => {
 };
 
 export default Contact;
+
+const ContactSection = styled(Section)`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+`;
+
+const InputGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+const Label = styled.label`
+  color: ${({ theme }) => theme.textPrimary};
+  font-weight: 500;
+`;
+
+const Input = styled.input`
+  padding: 0.8rem;
+  border: 1px solid ${({ theme }) => theme.inputBorder};
+  border-radius: 4px;
+  background: ${({ theme }) => theme.cardBg};
+  color: ${({ theme }) => theme.textPrimary};
+  font-size: 1rem;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: ${({ theme }) => theme.primaryColor};
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.primaryColor}33;
+  }
+`;
+
+const TextArea = styled.textarea`
+  padding: 0.8rem;
+  border: 1px solid ${({ theme }) => theme.inputBorder};
+  border-radius: 4px;
+  background: ${({ theme }) => theme.cardBg};
+  color: ${({ theme }) => theme.textPrimary};
+  font-size: 1rem;
+  min-height: 150px;
+  resize: vertical;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: ${({ theme }) => theme.primaryColor};
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.primaryColor}33;
+  }
+`;
