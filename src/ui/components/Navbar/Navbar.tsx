@@ -1,9 +1,9 @@
 import { useThemeMode } from "../../../context/hooks/useThemeMode";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { NavLink, NavLinks } from "./NavLink.styled";
-import { navItems } from "../../../types/types";
 import styled from "styled-components";
 import MobileNav from "./MobileNav";
+import { useScrollNavigation } from "../../../context/hooks/useScrollNavigation";
 
 const Nav = styled.nav`
   display: flex;
@@ -46,13 +46,20 @@ const MobileControls = styled.div`
 
 const Navbar = () => {
   const { isDarkMode, setIsDarkMode } = useThemeMode();
+  const { navItems, scrollToSection, handleHomeClick } = useScrollNavigation();
 
   return (
     <Nav>
-      <Logo>Ori Yossef</Logo>
+      <Logo onClick={handleHomeClick} className="cursor-pointer">
+        Ori Yossef
+      </Logo>
       <NavLinks>
         {navItems.map((item) => (
-          <NavLink key={item.path} to={item.path}>
+          <NavLink
+            key={item.path}
+            to={item.path}
+            onClick={() => scrollToSection(item.label)}
+          >
             {item.label.toUpperCase()}
           </NavLink>
         ))}

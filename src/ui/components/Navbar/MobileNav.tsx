@@ -10,10 +10,11 @@ import {
 import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { styled } from "styled-components";
 import { NavLink } from "./NavLink.styled";
-import { navItems } from "../../../types/types";
+import { useScrollNavigation } from "../../../context/hooks/useScrollNavigation";
 
 const MobileNav = () => {
   const [open, setOpen] = React.useState(false);
+  const { navItems, scrollToSection } = useScrollNavigation();
 
   return (
     <Root open={open} onOpenChange={setOpen}>
@@ -32,7 +33,10 @@ const MobileNav = () => {
               <MobileNavLink
                 key={item.path}
                 to={item.path}
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  scrollToSection(item.label);
+                  setOpen(false);
+                }}
               >
                 {item.label.toUpperCase()}
               </MobileNavLink>
