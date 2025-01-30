@@ -22,9 +22,16 @@ export type SizeOptions = "sm" | "md" | "lg" | "xl";
 
 export type FontWeightOptions = 300 | 400 | 500 | 600;
 
-export const navItems = [
-  { path: "/", label: "Home" },
-  { path: "/about", label: "About" },
-  { path: "/projects", label: "Projects" },
-  { path: "/contact", label: "Contact" },
+export type ScrollOptions = "home" | "about" | "projects" | "contact";
+
+export type NavItem = {
+  path: string;
+  label: ScrollOptions;
+};
+
+export const navItems: NavItem[] = [
+  { path: "/", label: "home" },
+  { path: "/about", label: "about" },
+  { path: "/projects", label: "projects" },
+  { path: "/contact", label: "contact" },
 ];
