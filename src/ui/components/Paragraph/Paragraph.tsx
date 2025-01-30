@@ -3,7 +3,7 @@ import {
   AlignOptions,
   FontWeightOptions,
   SizeOptions,
-} from "../../types/types";
+} from "../../../types/types";
 
 interface ParagraphProps {
   color?: string;
