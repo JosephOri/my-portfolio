@@ -5,6 +5,7 @@ import Navbar from "./ui/components/Navbar/Navbar";
 import { useThemeMode } from "./context/hooks/useThemeMode";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const { isDarkMode } = useThemeMode();
@@ -15,6 +16,7 @@ const App = () => {
       <Home />
       <About />
       <Contact />
+      <ToastContainer />
     </ThemeProvider>
   );
 };

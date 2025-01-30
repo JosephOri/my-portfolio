@@ -3,18 +3,15 @@ import emailjs from "emailjs-com";
 import { H1, Paragraph } from "../../ui/components";
 import Section from "../../ui/components/Section";
 import { Button, Loader } from "../../ui/components";
+import { toast } from "react-toastify";
 import styled from "styled-components";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
-    setErrorMessage("");
-    setSuccessMessage("");
 
     const formData = new FormData(e.currentTarget);
 
@@ -29,13 +26,16 @@ const Contact = () => {
         },
         import.meta.env.VITE_EMAILJS_USER_ID,
       );
-
-      setSuccessMessage(
-        "Message sent successfully! I will get back to you soon.",
-      );
+      toast.success("Email was sent successfully!", {
+        position: "top-right",
+        autoClose: 5000,
+      });
       (e.target as HTMLFormElement).reset();
     } catch (error) {
-      setErrorMessage("Failed to send message. Please try again later.");
+      toast.error("Failed to send message. Please try again later.", {
+        position: "top-right",
+        autoClose: 5000,
+      });
     } finally {
       setIsLoading(false);
     }
@@ -79,19 +79,6 @@ const Contact = () => {
             placeholder="Enter your message..."
           />
         </InputGroup>
-
-        {successMessage && (
-          <Paragraph color="success" align="center">
-            {successMessage}
-          </Paragraph>
-        )}
-
-        {errorMessage && (
-          <Paragraph color="error" align="center">
-            {errorMessage}
-          </Paragraph>
-        )}
-
         <Button type="submit" disabled={isLoading} value="Send">
           {isLoading ? <Loader size="sm" /> : "Send Message"}
         </Button>
