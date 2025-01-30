@@ -92,7 +92,7 @@ const Contact = () => {
           </Paragraph>
         )}
 
-        <Button type="submit" disabled={isLoading}>
+        <Button type="submit" disabled={isLoading} value="Send">
           {isLoading ? <Loader size="sm" /> : "Send Message"}
         </Button>
       </Form>
