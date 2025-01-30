@@ -99,9 +99,9 @@ const Contact = () => {
   };
 
   return (
-    <ContactSection id="contact">
-      <H1 align="center" className="mb-8">
-        Get In Touch
+    <ContactSection className="flex flex-col justify-center" id="contact">
+      <H1 size="md" align="left" className="mt-7 mb-4 text-teal-400">
+        Leave a message
       </H1>
 
       <Form onSubmit={handleSubmit}>
