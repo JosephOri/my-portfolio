@@ -7,9 +7,6 @@ const SectionWrapper = styled.section`
   min-height: 100vh;
   scroll-snap-align: start;
   padding: 2rem 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
   @media (max-width: 768px) {
     padding: 2rem 1rem;

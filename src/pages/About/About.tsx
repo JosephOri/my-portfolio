@@ -3,7 +3,7 @@ import Section from "../../ui/components/Section";
 
 const About = () => {
   return (
-    <Section id="about">
+    <Section id="about" className="flex flex-col justify-center">
       <H1 className="mb-10" size="md" uppercase>
         let me introduce myself
       </H1>
