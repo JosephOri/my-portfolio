@@ -1,16 +1,9 @@
-import styled from "styled-components";
 import { H1, Paragraph } from "../../ui/components";
-
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+import Section from "../../ui/components/Section";
 
 const Home = () => {
   return (
-    <Section>
+    <Section id="home" className="flex flex-col items-center justify-center">
       <H1 align="center" className="mt-5 px-2 md:mt-3">
         I'm <span className="text-teal-400">Ori Yossef</span>
         <br />a Software developer
