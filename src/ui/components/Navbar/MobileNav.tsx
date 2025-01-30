@@ -10,7 +10,7 @@ import {
 import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { styled } from "styled-components";
 import { NavLink } from "./NavLink.styled";
-import { navItems } from "../../types/types";
+import { navItems } from "../../../types/types";
 
 const MobileNav = () => {
   const [open, setOpen] = React.useState(false);
@@ -34,7 +34,7 @@ const MobileNav = () => {
                 to={item.path}
                 onClick={() => setOpen(false)}
               >
-                {item.label}
+                {item.label.toUpperCase()}
               </MobileNavLink>
             ))}
           </div>

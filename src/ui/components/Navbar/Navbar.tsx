@@ -1,7 +1,7 @@
 import { useThemeMode } from "../../../context/hooks/useThemeMode";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { NavLink, NavLinks } from "./NavLink.styled";
-import { navItems } from "../../types/types";
+import { navItems } from "../../../types/types";
 import styled from "styled-components";
 import MobileNav from "./MobileNav";
 
@@ -53,7 +53,7 @@ const Navbar = () => {
       <NavLinks>
         {navItems.map((item) => (
           <NavLink key={item.path} to={item.path}>
-            {item.label}
+            {item.label.toUpperCase()}
           </NavLink>
         ))}
         <DesktopControls>
