@@ -9,20 +9,6 @@ interface H1Props {
 }
 
 export const H1 = styled.h1<H1Props>`
-  font-size: ${({ size }) => {
-    switch (size) {
-      case "sm":
-        return "1.7rem";
-      case "md":
-        return "2.6rem";
-      case "lg":
-        return "3.6rem";
-      case "xl":
-        return "5rem";
-      default:
-        return "3.6rem";
-    }
-  }};
   font-weight: 700;
   color: ${(props) => props.color || props.theme.textPrimary || "#2d3436"};
   text-align: ${(props) => props.align || "left"};

@@ -17,25 +17,10 @@ interface ParagraphProps {
 export const Paragraph = styled.p<ParagraphProps>`
   color: ${({ color, theme }) => color || theme.textPrimary || "#333"};
   text-align: ${({ align }) => align || "left"};
-  font-size: ${({ size }) => {
-    switch (size) {
-      case "sm":
-        return "1rem";
-      case "md":
-        return "1.1rem";
-      case "lg":
-        return "1.25rem";
-      case "xl":
-        return "1.7rem";
-      default:
-        return "1rem";
-    }
-  }};
   font-weight: ${({ weight }) => weight || 400};
   line-height: 1.6;
   max-width: ${({ maxWidth }) => maxWidth || "65ch"};
   font-style: ${({ italic }) => (italic ? "italic" : "normal")};
-  letter-spacing: -0.01em;
 
   @media (max-width: 768px) {
     font-size: ${({ size: size }) =>

@@ -53,7 +53,7 @@ const Contact = () => {
 
   return (
     <ContactSection className="flex flex-col justify-center" id="contact">
-      <H1 size="md" align="left" className="mt-7 mb-4 text-teal-400">
+      <H1 align="left" className="mt-7 mb-4 text-teal-400">
         Contact me
       </H1>
 

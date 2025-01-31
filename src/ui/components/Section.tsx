@@ -39,7 +39,7 @@ const Section: React.FC<SectionProps> = ({ id, children, className }) => {
   }, [id, setActiveSection]);
 
   return (
-    <SectionWrapper id={id} ref={ref} className={`${className}`}>
+    <SectionWrapper id={id} ref={ref} className={className}>
       {children}
     </SectionWrapper>
   );
