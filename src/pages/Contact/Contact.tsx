@@ -52,8 +52,8 @@ const Contact = () => {
   };
 
   return (
-    <ContactSection className="flex flex-col justify-center" id="contact">
-      <H1 align="left" className="mt-7 mb-4 text-teal-400">
+    <ContactSection id="contact">
+      <H1 align="left" className="mt-7 mb-4 text-5xl text-teal-400">
         Contact me
       </H1>
 
@@ -107,9 +107,11 @@ const Contact = () => {
 export default Contact;
 
 const ContactSection = styled(Section)`
+  display: flex;
+  flex-direction: column;
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 4rem;
 `;
 
 const Form = styled.form`
