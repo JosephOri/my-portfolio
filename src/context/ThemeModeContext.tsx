@@ -14,7 +14,7 @@ export const ThemeModeContext = createContext<ThemeModeContextType | undefined>(
 export const ThemeModeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const theme = isDarkMode ? darkTheme : lightTheme;
 
   useEffect(() => {

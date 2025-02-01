@@ -3,10 +3,10 @@ import Section from "../../ui/components/Section";
 
 const Home = () => {
   return (
-    <Section id="home" className="grid place-content-center">
+    <Section id="home" className="grid place-content-center gap-1.5">
       <H1 align="center" className="text-6xl xl:text-7xl">
-        I'm <span className="text-teal-400">Ori Yossef</span>
-        <br />a Software developer
+        Hi, I'm <span className="text-teal-400">Ori</span>
+        <br />A Software developer
       </H1>
       <Paragraph align="center" weight={400} className="mt-7 px-3 text-xl">
         I enjoy solving complex problems. Frequently praised as detail-oriented
