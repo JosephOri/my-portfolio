@@ -20,6 +20,18 @@ export const ThemeModeProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     const body = document.body;
     body.style.backgroundColor = isDarkMode ? darkTheme.body : lightTheme.body;
+
+    const favicon = document.querySelector(
+      "link[rel='icon']",
+    ) as HTMLLinkElement | null;
+    if (favicon) {
+      favicon.href = `/favicon-${isDarkMode ? "dark" : "light"}.ico`;
+    } else {
+      const link = document.createElement("link");
+      link.rel = "icon";
+      link.href = `/favicon-${isDarkMode ? "dark" : "light"}.ico`;
+      document.head.appendChild(link);
+    }
   }, [isDarkMode]);
 
   return (
