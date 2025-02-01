@@ -1,7 +1,14 @@
-import { navItems, ScrollOptions } from "../../types/types";
+import { NavItem, ScrollOptions } from "../../types/types";
 import { useScroll } from "./useScroll";
 
 export const useScrollNavigation = () => {
+  const navItems: NavItem[] = [
+    { path: "/", label: "home" },
+    { path: "/about", label: "about" },
+    { path: "/projects", label: "projects" },
+    { path: "/contact", label: "contact" },
+  ];
+
   const { activeSection, setActiveSection } = useScroll();
 
   const scrollToSection = (sectionId: ScrollOptions) => {

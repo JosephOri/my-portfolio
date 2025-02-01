@@ -11,9 +11,3 @@ export type NavItem = {
   label: ScrollOptions;
 };
 
-export const navItems: NavItem[] = [
-  { path: "/", label: "home" },
-  { path: "/about", label: "about" },
-  { path: "/projects", label: "projects" },
-  { path: "/contact", label: "contact" },
-];
