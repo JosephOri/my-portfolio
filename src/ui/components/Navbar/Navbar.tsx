@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo onClick={handleHomeClick} className="cursor-pointer">
-        Ori Yossef
+        O Y 
       </Logo>
       <NavLinks>
         {navItems.map((item) => (
