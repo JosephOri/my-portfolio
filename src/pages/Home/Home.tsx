@@ -9,9 +9,9 @@ const Home = () => {
         <br />A Software developer
       </H1>
       <Paragraph align="center" weight={400} className="mt-7 px-3 text-xl">
-        I enjoy solving complex problems. Frequently praised as detail-oriented
-        by my peers, I can be relied upon to help your company achieve its goals
-        by providing sustainable and scalable solutions.
+        I enjoy solving complex problems. Frequently praised as creative and
+        dedicated by my peers, I can be relied upon to help your company achieve
+        its goals by providing sustainable and scalable solutions.
       </Paragraph>
     </Section>
   );
