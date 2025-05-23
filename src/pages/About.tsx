@@ -7,16 +7,14 @@ const About = () => {
   return (
     <Section id="about" className="flex flex-col justify-center text-xl">
       <H1 className="mb-10 text-4xl" color={theme.headerSecondary} uppercase>
-        let me introduce myself
+        Who Am I
       </H1>
-      <Paragraph>Hi Everyone, I am Ori Yossef.</Paragraph>
       <Paragraph>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, saepe
-        tempore iusto laudantium facere eius explicabo modi quia minima nam.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum adipisci
-        reprehenderit sequi facere tenetur amet?
+        I am constantly learning and improving my skills in programming,
+        software development, and problem-solving. I am passionate about using
+        technology to make a positive impact on society and am excited to
+        contribute to innovative projects that can change the world. My
+        Portfolio profile is a showcase of my projects and interests.
       </Paragraph>
     </Section>
   );
