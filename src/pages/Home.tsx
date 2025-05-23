@@ -1,5 +1,5 @@
-import { H1, Paragraph } from "../../ui/components";
-import Section from "../../ui/components/Section";
+import { H1, Paragraph } from "../ui/components";
+import Section from "../ui/components/Section";
 
 const Home = () => {
   return (

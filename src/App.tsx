@@ -1,4 +1,4 @@
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home";
 import { ThemeProvider } from "styled-components";
 import Navbar from "./ui/components/Navbar/Navbar";
 import { useThemeMode } from "./context/hooks/useThemeMode";
