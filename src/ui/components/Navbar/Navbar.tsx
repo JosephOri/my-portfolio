@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo onClick={handleHomeClick} className="cursor-pointer">
-        O Y 
+        O Y
       </Logo>
       <NavLinks>
         {navItems.map((item) => (
@@ -78,7 +78,7 @@ const Navbar = () => {
           checked={isDarkMode}
           onChange={() => setIsDarkMode((prev) => !prev)}
           size={45}
-          speed={2}
+          speed={0.2}
         />
         <MobileNav />
       </MobileControls>
