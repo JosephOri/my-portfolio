@@ -1,11 +1,6 @@
 import Section from "../ui/components/Section";
 import { Grid } from "@mui/material";
-import {
-  githubUrl,
-  linkedinUrl,
-  programmerImage,
-  twitterUrl,
-} from "../constants";
+import { images, links } from "../constants";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -30,21 +25,25 @@ const Home = () => {
             I enjoy solving complex problems. Frequently praised as creative and
             dedicated by my peers, I can be relied upon to help your company
           </Paragraph>
-          <IconLink href={githubUrl} Icon={GitHubIcon} label="Github profile" />
           <IconLink
-            href={linkedinUrl}
+            href={links.github}
+            Icon={GitHubIcon}
+            label="Github profile"
+          />
+          <IconLink
+            href={links.linkedin}
             Icon={LinkedInIcon}
             label="LinkedIn profile"
           />
           <IconLink
-            href={twitterUrl}
+            href={links.twitter}
             Icon={TwitterIcon}
             label="Twitter profile"
           />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
           <img
-            src={programmerImage}
+            src={images.programmerImage}
             alt="profile"
             className="w-full max-w-full"
           />
