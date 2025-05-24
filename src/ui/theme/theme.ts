@@ -6,6 +6,7 @@ export interface Theme extends DefaultTheme {
   textPrimary: string;
   textSecondary: string;
   primaryColor: string;
+  headerPrimary: string;
   headerSecondary: string;
   linkColor: string;
   linkHoverColor: string;
@@ -25,6 +26,7 @@ export const lightTheme: Theme = {
   textPrimary: "#333333",
   textSecondary: "#666666",
   primaryColor: "#2563eb",
+  headerPrimary: "#333333",
   headerSecondary: "#2dd4bf",
   linkColor: "#2563eb",
   linkHoverColor: "#1d4ed8",
@@ -44,6 +46,7 @@ export const darkTheme: Theme = {
   textPrimary: "#F5F5F5",
   textSecondary: "#B3B3B3",
   primaryColor: "#63b3ed",
+  headerPrimary: "#F5F5F5",
   headerSecondary: "#2dd4bf",
   linkColor: "#63b3ed",
   linkHoverColor: "#4d85bb",
