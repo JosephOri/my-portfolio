@@ -53,9 +53,7 @@ const Contact = () => {
 
   return (
     <ContactSection id="contact">
-      <H1 align="left" className="mt-7 mb-4 text-5xl text-teal-400">
-        Contact me
-      </H1>
+      <H1 className="mt-7 mb-4 text-left text-5xl text-teal-400">Contact me</H1>
 
       <Form onSubmit={handleSubmit(onSubmit)}>
         <InputGroup>
