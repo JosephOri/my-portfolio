@@ -1,14 +1,9 @@
 import styled from "styled-components";
-import {
-  AlignOptions,
-  FontWeightOptions,
-  SizeOptions,
-} from "../../../types/types";
+import { AlignOptions, FontWeightOptions } from "../../../types/types";
 
 interface ParagraphProps {
   color?: string;
   align?: AlignOptions;
-  size?: SizeOptions;
   weight?: FontWeightOptions;
   maxWidth?: string;
   italic?: boolean;
@@ -16,17 +11,10 @@ interface ParagraphProps {
 
 export const Paragraph = styled.p<ParagraphProps>`
   color: ${({ color, theme }) => color || theme.textPrimary || "#333"};
-  text-align: ${({ align }) => align || "left"};
   font-weight: ${({ weight }) => weight || 400};
   line-height: 1.6;
   max-width: ${({ maxWidth }) => maxWidth || "65ch"};
   font-style: ${({ italic }) => (italic ? "italic" : "normal")};
-
-  @media (max-width: 768px) {
-    font-size: ${({ size: size }) =>
-      size === "xl" ? "1.125rem" : "0.9375rem"};
-    line-height: 1.5;
-  }
 
   a {
     color: ${({ theme }) => theme.linkColor || "#2563eb"};
