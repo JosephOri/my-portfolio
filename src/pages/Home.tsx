@@ -25,7 +25,7 @@ const Home = () => {
           </H1>
           <Paragraph
             color={theme.textPrimary}
-            className="mb-7 text-lg lg:text-xl"
+            className="text-md mb-7 lg:text-xl"
           >
             I enjoy solving complex problems. Frequently praised as creative and
             dedicated by my peers, I can be relied upon to help your company
@@ -43,7 +43,11 @@ const Home = () => {
           />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <img src={programmerImage} alt="profile" />
+          <img
+            src={programmerImage}
+            alt="profile"
+            className="w-full max-w-full"
+          />
         </Grid>
       </Grid>
     </Section>
