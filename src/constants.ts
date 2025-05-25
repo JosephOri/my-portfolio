@@ -1,6 +1,3 @@
-const programmerImage = "public/programmer2.svg";
-const oriImage = "public/ori-image.jpeg";
-
 const links = {
   linkedin: "https://www.linkedin.com/in/ori-joseph-45o/",
   github: "https://github.com/josephori",
@@ -8,8 +5,8 @@ const links = {
 };
 
 const images = {
-  oriImage,
-  programmerImage,
+  programmerImage: "public/programmer2.svg",
+  oriImage: "public/ori-image.jpeg",
 };
 
 export { images, links };
