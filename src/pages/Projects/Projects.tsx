@@ -1,8 +1,8 @@
-import Section from "../../components/ui/Section";
-import { H1, Paragraph } from "../../components/ui";
-import { useThemeMode } from "../../context/hooks/useThemeMode";
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import { links } from "../../constants";
+import Section from "@components/ui/Section";
+import { H1 } from "@components/ui";
+import { useThemeMode } from "@context/hooks/useThemeMode";
+import ProjectCard from "@components/ProjectCard/ProjectCard";
+import { links } from "@constants";
 
 const projects = [
   {
@@ -10,7 +10,7 @@ const projects = [
     description:
       "a platform that enabled technical support staff to generate, edit, and finalize AI-generated guides with OpenAI API based on customer interactions, reducing repetitive tasks.",
     imageUrl: links.supportAi.image,
-    techStack: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    techStack: ["Next.js", "Nest.js", "OpenAI", "PostgreSQL"],
     githubUrl: links.supportAi.github,
     demoUrl: links.supportAi.demoVideo,
   },
@@ -42,12 +42,6 @@ const Projects = () => {
       <H1 className="mb-10 text-4xl" color={theme.headerSecondary}>
         Projects
       </H1>
-      <Paragraph className="mb-12 max-w-2xl" color={theme.textSecondary}>
-        Here are some of the projects I've worked on. Each project represents a
-        unique challenge and learning experience, showcasing different aspects
-        of my development skills.
-      </Paragraph>
-
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard

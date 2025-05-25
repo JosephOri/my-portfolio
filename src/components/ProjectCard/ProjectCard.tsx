@@ -1,7 +1,8 @@
 import { FC } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
-import { useThemeMode } from "../../context/hooks/useThemeMode";
+import { useThemeMode } from "@context/hooks/useThemeMode";
+import IconLink from "../ui/IconLink/IconLink";
 
 interface Props {
   title: string;
@@ -27,7 +28,6 @@ const ProjectCard: FC<Props> = ({
       className="group relative flex flex-col overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
       style={{ backgroundColor: theme.cardBg }}
     >
-      {/* Image Container */}
       <div className="relative h-48 w-full overflow-hidden">
         <img
           src={imageUrl}
@@ -36,7 +36,6 @@ const ProjectCard: FC<Props> = ({
         />
       </div>
 
-      {/* Content Container */}
       <div className="flex flex-1 flex-col p-6">
         <h3
           className="mb-2 text-xl font-bold"
@@ -49,7 +48,6 @@ const ProjectCard: FC<Props> = ({
           {description}
         </p>
 
-        {/* Tech Stack */}
         <div className="mb-4 flex flex-wrap gap-2">
           {techStack.map((tech) => (
             <span
@@ -65,28 +63,19 @@ const ProjectCard: FC<Props> = ({
           ))}
         </div>
 
-        {/* Links */}
         <div className="flex gap-4">
-          <a
+          <IconLink
             href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 transition-colors hover:opacity-80"
-            style={{ color: theme.linkColor }}
-          >
-            <GitHubIcon />
-            <span>Code</span>
-          </a>
-          <a
+            Icon={GitHubIcon}
+            label="Github"
+            size="medium"
+          />
+          <IconLink
             href={demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 transition-colors hover:opacity-80"
-            style={{ color: theme.linkColor }}
-          >
-            <PlayCircleIcon />
-            <span>Demo</span>
-          </a>
+            Icon={PlayCircleIcon}
+            label="Demo"
+            size="medium"
+          />
         </div>
       </div>
     </div>

@@ -30,16 +30,19 @@ const Home = () => {
               href={links.github}
               Icon={GitHubIcon}
               label="Github profile"
+              size="large"
             />
             <IconLink
               href={links.linkedin}
               Icon={LinkedInIcon}
               label="LinkedIn profile"
+              size="large"
             />
             <IconLink
               href={links.twitter}
               Icon={TwitterIcon}
               label="Twitter profile"
+              size="large"
             />
           </div>
         </div>
