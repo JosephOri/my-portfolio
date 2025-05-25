@@ -12,7 +12,7 @@ const Home = () => {
   const { theme } = useThemeMode();
   return (
     <Section id="home" className="flex flex-col items-start justify-center">
-      <div className="grid grid-cols-1 items-center justify-center gap-8 md:grid-cols-2">
+      <div className="grid grid-cols-1 items-center justify-center gap-9 md:grid-cols-2">
         <div>
           <H1 color={theme.headerPrimary} className="mb-7 text-2xl lg:text-4xl">
             Hi, I'm <span className="text-teal-400">Ori </span>
@@ -47,7 +47,7 @@ const Home = () => {
           <img
             src={images.programmerImage}
             alt="profile"
-            className="w-full max-w-full"
+            className="w-full max-w-full lg:w-2/3"
           />
         </div>
       </div>
