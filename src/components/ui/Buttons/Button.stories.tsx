@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ContactMessageButton } from "./Button";
 import { Loader } from "../Loader/Loader";
 import { ThemeProvider } from "styled-components";
-import { lightTheme } from "../../theme/theme";
+import { lightTheme } from "../theme/theme";
 
 const meta: Meta<typeof ContactMessageButton> = {
   title: "Components/Button",

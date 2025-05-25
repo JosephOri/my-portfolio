@@ -2,9 +2,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import emailjs from "emailjs-com";
-import { H1, Paragraph } from "../ui/components";
-import Section from "../ui/components/Section";
-import { ContactMessageButton, Loader } from "../ui/components";
+import { H1, Paragraph } from "../components/ui";
+import Section from "../components/ui/Section";
+import { ContactMessageButton, Loader } from "../components/ui";
 import styled from "styled-components";
 import { toast } from "react-toastify";
 

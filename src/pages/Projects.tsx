@@ -1,5 +1,5 @@
-import Section from "../ui/components/Section";
-import { H1, Paragraph } from "../ui/components";
+import Section from "../components/ui/Section";
+import { H1, Paragraph } from "../components/ui";
 import { useThemeMode } from "../context/hooks/useThemeMode";
 const Projects = () => {
   const { theme } = useThemeMode();

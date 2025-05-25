@@ -1,9 +1,9 @@
-import { useThemeMode } from "../../../context/hooks/useThemeMode";
+import { useThemeMode } from "../../context/hooks/useThemeMode";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { NavLink, NavLinks } from "./NavLink.styled";
 import styled from "styled-components";
 import MobileNav from "./MobileNav";
-import { useScrollNavigation } from "../../../context/hooks/useScrollNavigation";
+import { useScrollNavigation } from "../../context/hooks/useScrollNavigation";
 
 const Nav = styled.nav`
   display: flex;

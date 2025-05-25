@@ -10,7 +10,7 @@ import {
 import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { styled } from "styled-components";
 import { NavLink } from "./NavLink.styled";
-import { useScrollNavigation } from "../../../context/hooks/useScrollNavigation";
+import { useScrollNavigation } from "../../context/hooks/useScrollNavigation";
 
 const MobileNav = () => {
   const [open, setOpen] = React.useState(false);

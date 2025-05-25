@@ -1,12 +1,12 @@
-import Section from "../ui/components/Section";
+import Section from "../components/ui/Section";
 import { images, links } from "../constants";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import IconLink from "../ui/components/IconLink/IconLink";
+import IconLink from "../components/ui/IconLink/IconLink";
 import { useThemeMode } from "../context/hooks/useThemeMode";
-import { H1 } from "../ui/components/H1/H1";
-import { Paragraph } from "../ui/components";
+import { H1 } from "../components/ui/H1/H1";
+import { Paragraph } from "../components/ui";
 
 const Home = () => {
   const { theme } = useThemeMode();

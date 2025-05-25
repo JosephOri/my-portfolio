@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
 import { ThemeProvider } from "styled-components";
-import Navbar from "./ui/components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import { useThemeMode } from "./context/hooks/useThemeMode";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
