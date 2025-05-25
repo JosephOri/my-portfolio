@@ -4,12 +4,6 @@ const links = {
   linkedin: "https://www.linkedin.com/in/ori-joseph-45o/",
   github: "https://github.com/josephori",
   twitter: "https://x.com/josephori30",
-  supportAi: {
-    github: "https://github.com/SupportAI-Project/SupportAI",
-    demoVideo:
-      "https://www.canva.com/design/DAGoQOVuP8E/FKLiNfg6HMvnT_mJivBD-Q/watch?utm_content=DAGoQOVuP8E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6844b85385",
-    image: "public/supportai-chat-dashboard.png",
-  },
 };
 
 const images = {
@@ -22,19 +16,21 @@ const projects: Project[] = [
     title: "Support AI",
     description:
       "a platform that enabled technical support staff to generate, edit, and finalize AI-generated guides with OpenAI API based on customer interactions, reducing repetitive tasks.",
-    imageUrl: links.supportAi.image,
+    imageUrl: "public/supportai-chat-dashboard.png",
     techStack: ["Next.js", "Nest.js", "OpenAI", "PostgreSQL"],
-    githubUrl: links.supportAi.github,
-    demoUrl: links.supportAi.demoVideo,
+    githubUrl: "https://github.com/SupportAI-Project/SupportAI",
+    demoUrl:
+      "https://www.canva.com/design/DAGoQOVuP8E/FKLiNfg6HMvnT_mJivBD-Q/watch?utm_content=DAGoQOVuP8E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6844b85385",
   },
   {
     title: "React AI Chatbot",
     description:
-      "A full-stack e-commerce platform with user authentication, product management, and payment integration.",
-    imageUrl: "/images/ecommerce-preview.jpg",
-    techStack: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubUrl: "https://github.com/yourusername/ecommerce",
-    demoUrl: "https://your-ecommerce.com",
+      "a Real-time AI Chatbot with React.js, integrating ChatGPT, Gemini AI and DeepSeek for dynamic conversations.",
+    imageUrl: "public/ai-chatbot.png",
+    techStack: ["React", "Deepseek", "ChatGPT", "Gemini AI"],
+    githubUrl: "https://github.com/josephori/react-ai-chatbot",
+    demoUrl:
+      "https://www.canva.com/design/DAGoc_YO8zE/OiKhnn2-fkRBPeAuszdnog/watch?utm_content=DAGoc_YO8zE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h854902d2ad",
   },
   {
     title: "Task Management App",

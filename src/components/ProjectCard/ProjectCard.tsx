@@ -1,6 +1,7 @@
 import { FC } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { useThemeMode } from "@context/hooks/useThemeMode";
 import IconLink from "../ui/IconLink/IconLink";
 
@@ -10,7 +11,8 @@ interface Props {
   imageUrl: string;
   techStack: string[];
   githubUrl: string;
-  demoUrl: string;
+  demoUrl?: string;
+  liveUrl?: string;
 }
 
 const ProjectCard: FC<Props> = ({
@@ -20,6 +22,7 @@ const ProjectCard: FC<Props> = ({
   techStack,
   githubUrl,
   demoUrl,
+  liveUrl,
 }) => {
   const { theme } = useThemeMode();
 
@@ -70,12 +73,22 @@ const ProjectCard: FC<Props> = ({
             label="Github"
             size="medium"
           />
-          <IconLink
-            href={demoUrl}
-            Icon={PlayCircleIcon}
-            label="Demo"
-            size="medium"
-          />
+          {demoUrl && (
+            <IconLink
+              href={demoUrl}
+              Icon={PlayCircleIcon}
+              label="Demo"
+              size="medium"
+            />
+          )}
+          {liveUrl && (
+            <IconLink
+              href={liveUrl}
+              Icon={OpenInNewIcon}
+              label="Live"
+              size="medium"
+            />
+          )}
         </div>
       </div>
     </div>

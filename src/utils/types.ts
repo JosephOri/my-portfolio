@@ -4,7 +4,8 @@ type Project = {
   imageUrl: string;
   techStack: string[];
   githubUrl: string;
-  demoUrl: string;
+  demoUrl?: string;
+  liveUrl?: string;
 };
 
 export type { Project };
