@@ -78,7 +78,7 @@ const Navbar = () => {
           checked={isDarkMode}
           onChange={() => setIsDarkMode((prev) => !prev)}
           size={45}
-          speed={0.2}
+          speed={1}
         />
         <MobileNav />
       </MobileControls>

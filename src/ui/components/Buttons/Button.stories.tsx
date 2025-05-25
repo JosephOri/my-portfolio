@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./Button";
+import { ContactMessageButton } from "./Button";
 import { Loader } from "../Loader/Loader";
 import { ThemeProvider } from "styled-components";
 import { lightTheme } from "../../theme/theme";
 
-const meta: Meta<typeof Button> = {
+const meta: Meta<typeof ContactMessageButton> = {
   title: "Components/Button",
-  component: Button,
+  component: ContactMessageButton,
   decorators: [
     (Story) => (
       <ThemeProvider theme={lightTheme}>
@@ -25,7 +25,7 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof ContactMessageButton>;
 
 export const Primary: Story = {
   args: {
@@ -53,11 +53,11 @@ export const WithLoader: Story = {
     disabled: true,
   },
   render: (args) => (
-    <Button {...args}>
+    <ContactMessageButton {...args}>
       <span style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
         <Loader size="sm" />
         {args.children}
       </span>
-    </Button>
+    </ContactMessageButton>
   ),
 };

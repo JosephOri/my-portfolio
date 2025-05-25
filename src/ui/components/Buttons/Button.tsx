@@ -1,16 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface ButtonProps {
   color?: string;
-  variant?: 'solid' | 'outline';
+  variant?: "solid" | "outline";
 }
 
-export const Button = styled.button<ButtonProps>`
+export const ContactMessageButton = styled.button<ButtonProps>`
   padding: 0.8rem 1.5rem;
-  background: ${({ theme, color, variant }) => 
-    variant === 'outline' ? 'transparent' : color || theme.primaryColor};
-  color: ${({ theme, color, variant }) => 
-    variant === 'outline' ? (color || theme.primaryColor) : '#fff'};
+  background: ${({ theme, color, variant }) =>
+    variant === "outline" ? "transparent" : color || theme.primaryColor};
+  color: ${({ theme, color, variant }) =>
+    variant === "outline" ? color || theme.primaryColor : "#fff"};
   border: 2px solid ${({ theme, color }) => color || theme.primaryColor};
   border-radius: 4px;
   font-weight: 500;
