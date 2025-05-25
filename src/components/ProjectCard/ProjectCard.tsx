@@ -35,7 +35,7 @@ const ProjectCard: FC<Props> = ({
         <img
           src={imageUrl}
           alt={title}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+          className="h-full w-full object-fill transition-transform duration-300 group-hover:scale-110"
         />
       </div>
 
