@@ -22,7 +22,6 @@ const projects: Project[] = [
     demoUrl:
       "https://www.canva.com/design/DAGoQOVuP8E/FKLiNfg6HMvnT_mJivBD-Q/watch?utm_content=DAGoQOVuP8E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6844b85385",
   },
-
   {
     title: "Stoic Reads",
     description:
@@ -33,6 +32,14 @@ const projects: Project[] = [
     demoUrl: "https://www.youtube.com/watch?v=TeoeFkO_GTg",
   },
   {
+    title: "Weather App",
+    description:
+      "a weather app that allows users to search for weather information for a specific city, and displays the weather information in a user-friendly interface.",
+    imageUrl: "public/weather-app.png",
+    techStack: ["React", "OpenWeatherMap API", "Context API"],
+    githubUrl: "https://github.com/josephori/Weather-app",
+  },
+  {
     title: "React AI Chatbot",
     description:
       "a real-time AI chatbot built with React.js, seamlessly integrating ChatGPT, Gemini AI, and DeepSeek to deliver dynamic, multi-model conversations for enhanced user engagement.",
@@ -41,6 +48,14 @@ const projects: Project[] = [
     githubUrl: "https://github.com/josephori/react-ai-chatbot",
     demoUrl:
       "https://www.canva.com/design/DAGoc_YO8zE/OiKhnn2-fkRBPeAuszdnog/watch?utm_content=DAGoc_YO8zE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h854902d2ad",
+  },
+  {
+    title: "Google Flights Clone",
+    description:
+      "a clone of the Google Flights website, allowing users to search for flights and book them.",
+    imageUrl: "public/google-flights-clone.png",
+    techStack: ["Next.js", "Tailwind CSS", "RapidAPI"],
+    githubUrl: "https://github.com/josephori/google-flights-clone",
   },
 ];
 
