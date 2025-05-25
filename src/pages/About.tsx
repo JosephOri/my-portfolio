@@ -1,14 +1,14 @@
 import { useThemeMode } from "../context/hooks/useThemeMode";
 import Section from "../ui/components/Section";
-import { Grid } from "@mui/material";
 import { images } from "../constants";
 import { H1, Paragraph } from "../ui/components";
+
 const About = () => {
   const { theme } = useThemeMode();
   return (
     <Section id="about" className="flex flex-col justify-center text-xl">
-      <Grid container spacing={4}>
-        <Grid size={{ xs: 12, md: 6 }}>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div>
           <H1 className="text-2xl lg:text-4xl" color={theme.headerSecondary}>
             Who Am I
           </H1>
@@ -20,11 +20,15 @@ const About = () => {
             to contribute to innovative projects that can change the world. My
             Portfolio profile is a showcase of my projects and interests.
           </Paragraph>
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <img src={images.oriImage} alt="programmer" />
-        </Grid>
-      </Grid>
+        </div>
+        <div className="hidden md:block">
+          <img
+            src={images.oriImage}
+            alt="programmer"
+            className="w-2/3 max-w-full"
+          />
+        </div>
+      </div>
     </Section>
   );
 };
