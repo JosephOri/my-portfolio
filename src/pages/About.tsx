@@ -13,13 +13,30 @@ const About = () => {
             Who Am I
           </H1>
           <br />
-          <Paragraph className="text-lg xl:text-xl">
-            I am constantly learning and improving my skills in programming,
-            software development, and problem-solving. I am passionate about
-            using technology to make a positive impact on society and am excited
-            to contribute to innovative projects that can change the world. My
-            Portfolio profile is a showcase of my projects and interests.
-          </Paragraph>
+          <div className="text-lg xl:text-xl">
+            <Paragraph>
+              I'm a developer with a passion for turning ideas into reality
+              through clean, efficient code. Problem-solving isn't just a skill,
+              it's a mindset. Whether it's debugging a stubborn issue or
+              architecting a scalable system, I love the thrill of the
+              challenge.
+            </Paragraph>
+            <br />
+            <Paragraph>
+              Away from the keyboard, I'm a lifelong learner, always exploring
+              new technologies, frameworks, and methodologies. My peers
+              describes me as a creative problem-solver, deeply dedicated to my
+              code and driven by curiosity. Collaboration is at the heart of my
+              work. I believe the best results come from shared knowledge, open
+              communication, and a bit of humor along the way.
+            </Paragraph>
+            <br />
+            <Paragraph>
+              When I'm not coding, you'll find me at the gym or reading a book.
+              At the end of the day, I'm someone who cares deeply about
+              craftsmanship in code and in life.
+            </Paragraph>
+          </div>
         </div>
         <div className="hidden md:block">
           <img

@@ -22,8 +22,10 @@ const Home = () => {
             color={theme.textPrimary}
             className="text-md mb-7 lg:text-xl"
           >
-            I enjoy solving complex problems. Frequently praised as creative and
-            dedicated by my peers, I can be relied upon to help your company
+            I'm a relentless problem-solver who turns complex challenges into
+            elegant code. With a passion for innovation and a reputation for
+            creative, high-impact solutions, I thrive where technology meets
+            ingenuity. Let's build the future, one line at a time.
           </Paragraph>
           <div className="flex gap-4">
             <IconLink

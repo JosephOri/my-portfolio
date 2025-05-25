@@ -8,7 +8,8 @@ const Projects = () => {
   const { theme } = useThemeMode();
   return (
     <Section id="projects" className="mt-20 flex flex-col">
-      <H1 color={theme.body}>hidden text for layout</H1>
+      <br />
+      <br />
       <H1 className="mb-10 text-4xl" color={theme.headerSecondary}>
         Projects
       </H1>
