@@ -11,7 +11,7 @@ export default defineConfig({
       "@components": path.resolve(__dirname, "/src/components"),
       "@pages": path.resolve(__dirname, "/src/pages"),
       "@context": path.resolve(__dirname, "/src/context"),
-      "@constants": path.resolve(__dirname, "/src/constants.ts"),
+      "@utils": path.resolve(__dirname, "/src/utils"),
     },
   },
   plugins: [react(), tailwindcss()],

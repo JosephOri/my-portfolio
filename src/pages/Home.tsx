@@ -1,5 +1,5 @@
 import Section from "../components/ui/Section";
-import { images, links } from "../constants";
+import { images, links } from "../utils/constants";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";

@@ -1,6 +1,6 @@
 import { useThemeMode } from "../context/hooks/useThemeMode";
 import Section from "../components/ui/Section";
-import { images } from "../constants";
+import { images } from "../utils/constants";
 import { H1, Paragraph } from "../components/ui";
 
 const About = () => {

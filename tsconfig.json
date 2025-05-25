@@ -25,7 +25,7 @@
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
       "@context/*": ["src/context/*"],
-      "@constants": ["src/constants.ts"]
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src"],
