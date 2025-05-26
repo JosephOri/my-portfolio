@@ -1,5 +1,11 @@
 import { Project } from "./types";
-
+import supportaiChatDashboard from "../../public/supportai-chat-dashboard.png";
+import weatherApp from "../../public/weather-app.png";
+import googleFlightsClone from "../../public/google-flights-clone.png";
+import aiChatbot from "../../public/ai-chatbot.png";
+import stoicReads from "../../public/stoic-reads.png";
+import programmerImage from "../../public/programmer2.svg";
+import oriImage from "../../public/ori-image.jpeg";
 const links = {
   linkedin: "https://www.linkedin.com/in/ori-joseph-45o/",
   github: "https://github.com/josephori",
@@ -7,8 +13,8 @@ const links = {
 };
 
 const images = {
-  programmerImage: "public/programmer2.svg",
-  oriImage: "public/ori-image.jpeg",
+  programmerImage,
+  oriImage,
 };
 
 const projects: Project[] = [
@@ -16,7 +22,7 @@ const projects: Project[] = [
     title: "Support AI",
     description:
       "a platform for support staff to transform customer interactions into polished AI-generated guides (powered by OpenAI), reducing manual effort and ensuring consistent documentation.",
-    imageUrl: "public/supportai-chat-dashboard.png",
+    imageUrl: supportaiChatDashboard,
     techStack: ["Next.js", "Nest.js", "Docker", "PostgreSQL"],
     githubUrl: "https://github.com/SupportAI-Project/SupportAI",
     demoUrl:
@@ -26,7 +32,7 @@ const projects: Project[] = [
     title: "Stoic Reads",
     description:
       "a vibrant social media platform where book lovers can share detailed reviews, discuss their favorite reads, and discover new literary gems through engaging community interactions.",
-    imageUrl: "public/stoic-reads.png",
+    imageUrl: stoicReads,
     techStack: ["React", "Express", "MongoDB", "Material-UI"],
     githubUrl: "https://github.com/JosephOri/StoicReads?tab=readme-ov-file",
     demoUrl: "https://www.youtube.com/watch?v=TeoeFkO_GTg",
@@ -35,7 +41,7 @@ const projects: Project[] = [
     title: "Weather App",
     description:
       "a weather app that allows users to search for weather information for a specific city, and displays the weather information in a user-friendly interface.",
-    imageUrl: "public/weather-app.png",
+    imageUrl: weatherApp,
     techStack: ["React", "OpenWeatherMap API", "Context API"],
     githubUrl: "https://github.com/josephori/Weather-app",
   },
@@ -43,7 +49,7 @@ const projects: Project[] = [
     title: "React AI Chatbot",
     description:
       "a real-time AI chatbot built with React.js, seamlessly integrating ChatGPT, Gemini AI, and DeepSeek to deliver dynamic, multi-model conversations for enhanced user engagement.",
-    imageUrl: "public/ai-chatbot.png",
+    imageUrl: aiChatbot,
     techStack: ["React", "Deepseek", "OpenAI", "Gemini AI"],
     githubUrl: "https://github.com/josephori/react-ai-chatbot",
     demoUrl:
@@ -53,7 +59,7 @@ const projects: Project[] = [
     title: "Google Flights Clone",
     description:
       "a clone of the Google Flights website, allowing users to search for flights and book them.",
-    imageUrl: "public/google-flights-clone.png",
+    imageUrl: googleFlightsClone,
     techStack: ["Next.js", "Tailwind CSS", "RapidAPI"],
     githubUrl: "https://github.com/josephori/google-flights-clone",
   },
