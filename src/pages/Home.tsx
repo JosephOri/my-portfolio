@@ -52,7 +52,7 @@ const Home = () => {
           <img
             src={images.programmerImage}
             alt="profile"
-            className="w-full max-w-full lg:w-2/3"
+            className="w-full max-w-full"
           />
         </div>
       </div>
