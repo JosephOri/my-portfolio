@@ -23,12 +23,12 @@ const About = () => {
             </Paragraph>
             <br />
             <Paragraph>
-              Away from the keyboard, I'm a lifelong learner, always exploring
-              new technologies, frameworks, and methodologies. My peers
-              describes me as a creative problem-solver, deeply dedicated to my
-              code and driven by curiosity. Collaboration is at the heart of my
-              work. I believe the best results come from shared knowledge, open
-              communication, and a bit of humor along the way.
+              I'm a lifelong learner, always exploring new technologies,
+              frameworks, and methodologies. My peers describes me as a creative
+              problem-solver, deeply dedicated to my code and driven by
+              curiosity. Collaboration is at the heart of my work. I believe the
+              best results come from shared knowledge, open communication, and a
+              bit of humor along the way.
             </Paragraph>
             <br />
             <Paragraph>

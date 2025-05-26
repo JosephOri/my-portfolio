@@ -17,7 +17,7 @@ const projects: Project[] = [
     description:
       "a platform for support staff to transform customer interactions into polished AI-generated guides (powered by OpenAI), reducing manual effort and ensuring consistent documentation.",
     imageUrl: "public/supportai-chat-dashboard.png",
-    techStack: ["Next.js", "Nest.js", "OpenAI", "PostgreSQL"],
+    techStack: ["Next.js", "Nest.js", "Docker", "PostgreSQL"],
     githubUrl: "https://github.com/SupportAI-Project/SupportAI",
     demoUrl:
       "https://www.canva.com/design/DAGoQOVuP8E/FKLiNfg6HMvnT_mJivBD-Q/watch?utm_content=DAGoQOVuP8E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6844b85385",
