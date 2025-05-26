@@ -7,6 +7,7 @@ import Section from "../components/ui/Section";
 import { ContactMessageButton, Loader } from "../components/ui";
 import styled from "styled-components";
 import { toast } from "react-toastify";
+import { useThemeMode } from "@/context/hooks/useThemeMode";
 
 const contactSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
@@ -51,11 +52,15 @@ const Contact = () => {
     }
   };
 
+  const { theme } = useThemeMode();
   return (
     <ContactSection id="contact">
       <br />
       <br />
-      <H1 className="mb-4 text-left text-6xl">Contact me</H1>
+      <H1 color={theme.headerSecondary} className="mb-4 text-left text-6xl">
+        Contact me
+      </H1>
+      <H1 className="mb-7 ml-2 text-xl">Let's get in touch</H1>
 
       <Form onSubmit={handleSubmit(onSubmit)}>
         <InputGroup>
@@ -64,10 +69,10 @@ const Contact = () => {
             {...register("name")}
             type="text"
             id="name"
-            placeholder="Enter your name"
+            placeholder="* Enter your name"
           />
           {errors.name && (
-            <Paragraph color="red">{errors.name.message}</Paragraph>
+            <Paragraph color={theme.error}>{errors.name.message}</Paragraph>
           )}
         </InputGroup>
 
@@ -77,10 +82,10 @@ const Contact = () => {
             {...register("email")}
             type="email"
             id="email"
-            placeholder="Enter your email"
+            placeholder="* Enter your email"
           />
           {errors.email && (
-            <Paragraph color="red">{errors.email.message}</Paragraph>
+            <Paragraph color={theme.error}>{errors.email.message}</Paragraph>
           )}
         </InputGroup>
 
@@ -89,14 +94,18 @@ const Contact = () => {
           <TextArea
             {...register("message")}
             id="message"
-            placeholder="Enter your message..."
+            placeholder="* Enter your message..."
           />
           {errors.message && (
-            <Paragraph color="red">{errors.message.message}</Paragraph>
+            <Paragraph color={theme.error}>{errors.message.message}</Paragraph>
           )}
         </InputGroup>
 
-        <ContactMessageButton type="submit" disabled={isSubmitting}>
+        <ContactMessageButton
+          type="submit"
+          disabled={isSubmitting}
+          color={theme.headerSecondary}
+        >
           {isSubmitting ? <Loader size="sm" /> : "Send Message"}
         </ContactMessageButton>
       </Form>

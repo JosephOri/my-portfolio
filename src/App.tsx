@@ -6,9 +6,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import { ToastContainer } from "react-toastify";
 import Projects from "./pages/Projects/Projects";
+
 const App = () => {
   const { theme } = useThemeMode();
-
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
