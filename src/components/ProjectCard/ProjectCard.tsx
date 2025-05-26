@@ -4,6 +4,7 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { useThemeMode } from "@context/hooks/useThemeMode";
 import IconLink from "../ui/IconLink/IconLink";
+import { H1, Paragraph } from "../ui";
 
 interface Props {
   title: string;
@@ -31,25 +32,28 @@ const ProjectCard: FC<Props> = ({
       className="group relative flex flex-col overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
       style={{ backgroundColor: theme.cardBg }}
     >
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className="w-full overflow-hidden">
         <img
           src={imageUrl}
           alt={title}
-          className="h-full w-full object-fill transition-transform duration-300 group-hover:scale-110"
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <h3
-          className="mb-2 text-xl font-bold"
+        <H1
+          className="mb-2 text-2xl font-bold"
           style={{ color: theme.headerPrimary }}
         >
           {title}
-        </h3>
+        </H1>
 
-        <p className="mb-4 flex-1" style={{ color: theme.textSecondary }}>
+        <Paragraph
+          className="mb-4 flex-1 text-lg"
+          style={{ color: theme.textSecondary }}
+        >
           {description}
-        </p>
+        </Paragraph>
 
         <div className="mb-4 flex flex-wrap gap-2">
           {techStack.map((tech) => (
@@ -71,14 +75,14 @@ const ProjectCard: FC<Props> = ({
             href={githubUrl}
             Icon={GitHubIcon}
             label="Github"
-            size="medium"
+            size="large"
           />
           {demoUrl && (
             <IconLink
               href={demoUrl}
               Icon={PlayCircleIcon}
               label="Demo"
-              size="medium"
+              size="large"
             />
           )}
           {liveUrl && (
@@ -86,7 +90,7 @@ const ProjectCard: FC<Props> = ({
               href={liveUrl}
               Icon={OpenInNewIcon}
               label="Live"
-              size="medium"
+              size="large"
             />
           )}
         </div>

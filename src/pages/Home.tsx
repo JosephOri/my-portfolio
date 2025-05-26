@@ -12,15 +12,15 @@ const Home = () => {
   const { theme } = useThemeMode();
   return (
     <Section id="home" className="flex flex-col items-start justify-center">
-      <div className="grid grid-cols-1 items-center justify-center gap-9 md:grid-cols-2">
+      <div className="grid grid-cols-1 items-center justify-between gap-9 md:grid-cols-2">
         <div>
-          <H1 color={theme.headerPrimary} className="mb-7 text-2xl lg:text-4xl">
+          <H1 color={theme.headerPrimary} className="mb-7 text-2xl lg:text-6xl">
             Hi, I'm <span className="text-teal-400">Ori </span>
             <br />A Full Stack developer
           </H1>
           <Paragraph
             color={theme.textPrimary}
-            className="text-md mb-7 lg:text-xl"
+            className="text-md mb-7 lg:text-2xl"
           >
             I'm a relentless problem-solver who turns complex challenges into
             elegant code. With a passion for innovation and a reputation for
@@ -52,7 +52,7 @@ const Home = () => {
           <img
             src={images.programmerImage}
             alt="profile"
-            className="w-full max-w-full lg:w-2/3"
+            className="w-full max-w-full"
           />
         </div>
       </div>

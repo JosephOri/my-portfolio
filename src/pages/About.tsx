@@ -9,11 +9,11 @@ const About = () => {
     <Section id="about" className="flex flex-col justify-center text-xl">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div>
-          <H1 className="text-2xl lg:text-4xl" color={theme.headerSecondary}>
+          <H1 className="text-2xl lg:text-6xl" color={theme.headerSecondary}>
             Who Am I
           </H1>
           <br />
-          <div className="text-lg xl:text-xl">
+          <div className="text-lg xl:text-2xl">
             <Paragraph>
               I'm a developer with a passion for turning ideas into reality
               through clean, efficient code. Problem-solving isn't just a skill,

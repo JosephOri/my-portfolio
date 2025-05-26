@@ -20,7 +20,7 @@ export const ContactMessageButton = styled.button<ButtonProps>`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-
+  font-size: 1.5rem;
   &:hover {
     opacity: 0.9;
     transform: translateY(-1px);
