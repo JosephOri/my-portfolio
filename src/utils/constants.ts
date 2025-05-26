@@ -1,11 +1,11 @@
 import { Project } from "./types";
-import supportaiChatDashboard from "../../public/supportai-chat-dashboard.png";
-import weatherApp from "../../public/weather-app.png";
-import googleFlightsClone from "../../public/google-flights-clone.png";
-import aiChatbot from "../../public/ai-chatbot.png";
-import stoicReads from "../../public/stoic-reads.png";
-import programmerImage from "../../public/programmer2.svg";
-import oriImage from "../../public/ori-image.jpeg";
+import supportaiChatDashboard from "@assets/supportai-chat-dashboard.png";
+import weatherApp from "@assets/weather-app.png";
+import googleFlightsClone from "@assets/google-flights-clone.png";
+import aiChatbot from "@assets/ai-chatbot.png";
+import stoicReads from "@assets/stoic-reads.png";
+import programmerImage from "@assets/programmer2.svg";
+import oriImage from "@assets/ori-image.jpeg";
 const links = {
   linkedin: "https://www.linkedin.com/in/ori-joseph-45o/",
   github: "https://github.com/josephori",
