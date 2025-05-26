@@ -53,7 +53,9 @@ const Contact = () => {
 
   return (
     <ContactSection id="contact">
-      <H1 className="mt-7 mb-4 text-left text-5xl text-teal-400">Contact me</H1>
+      <br />
+      <br />
+      <H1 className="mb-4 text-left text-6xl">Contact me</H1>
 
       <Form onSubmit={handleSubmit(onSubmit)}>
         <InputGroup>
@@ -125,17 +127,19 @@ const InputGroup = styled.div`
 
 const Label = styled.label`
   color: ${({ theme }) => theme.textPrimary};
+  font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 0.2rem;
+  margin-top: 1rem;
 `;
 
 const Input = styled.input`
-  padding: 0.5rem;
+  padding: 1rem;
   border: 1px solid ${({ theme }) => theme.inputBorder};
   border-radius: 4px;
   background: ${({ theme }) => theme.cardBg};
   color: ${({ theme }) => theme.textPrimary};
-  font-size: 1rem;
+  font-size: 1.3rem;
   transition: all 0.3s ease;
 
   &:focus {
@@ -148,11 +152,11 @@ const Input = styled.input`
 const TextArea = styled.textarea`
   padding: 0.8rem;
   border: 1px solid ${({ theme }) => theme.inputBorder};
-  border-radius: 4px;
+  border-radius: 15px;
   background: ${({ theme }) => theme.cardBg};
   color: ${({ theme }) => theme.textPrimary};
-  font-size: 1rem;
-  min-height: 150px;
+  font-size: 1.3rem;
+  min-height: 200px;
   resize: vertical;
   transition: all 0.3s ease;
 

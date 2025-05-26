@@ -28,7 +28,7 @@ const MobileNav = () => {
       <Portal>
         <DialogOverlay />
         <DialogContent>
-          <div className="flex flex-col space-y-6 p-6">
+          <div className="flex flex-col space-y-6 px-2 py-22">
             {navItems.map((item) => (
               <MobileNavLink
                 key={item.path}
@@ -122,6 +122,7 @@ const DialogContent = styled(Content)`
 `;
 
 const MobileNavLink = styled(NavLink)`
+  text-decoration: underline;
   transform: translateX(20px);
   transition:
     opacity 300ms ease,
