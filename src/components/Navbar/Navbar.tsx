@@ -47,7 +47,7 @@ const Navbar = () => {
     <Nav>
       <div onClick={handleHomeClick} className="cursor-pointer">
         <img
-          className="h-13 w-13"
+          className="lg:h-13 lg:w-13"
           src={isDarkMode ? darkLogo : lightLogo}
           alt="logo"
         />
