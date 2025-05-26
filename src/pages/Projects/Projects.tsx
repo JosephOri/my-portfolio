@@ -10,8 +10,8 @@ const Projects = () => {
     <Section id="projects" className="mt-20 flex flex-col">
       <br />
       <br />
-      <H1 className="mb-10 text-4xl" color={theme.headerSecondary}>
-        Projects
+      <H1 className="mb-10 text-6xl" color={theme.headerSecondary}>
+        My Projects
       </H1>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (

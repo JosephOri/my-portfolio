@@ -4,6 +4,8 @@ import { NavLink, NavLinks } from "./NavLink.styled";
 import styled from "styled-components";
 import MobileNav from "./MobileNav";
 import { useScrollNavigation } from "../../context/hooks/useScrollNavigation";
+import darkLogo from "@assets/favicon-dark.ico";
+import lightLogo from "@assets/favicon-light.ico";
 
 const Nav = styled.nav`
   display: flex;
@@ -16,12 +18,6 @@ const Nav = styled.nav`
   z-index: 1000;
   transition: all 0.3s ease;
   backdrop-filter: saturate(180%) blur(5px);
-`;
-
-const Logo = styled.div`
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.textPrimary};
 `;
 
 const DesktopControls = styled.div`
@@ -47,18 +43,23 @@ const MobileControls = styled.div`
 const Navbar = () => {
   const { isDarkMode, setIsDarkMode } = useThemeMode();
   const { navItems, scrollToSection, handleHomeClick } = useScrollNavigation();
-
+  const { theme } = useThemeMode();
   return (
     <Nav>
-      <Logo onClick={handleHomeClick} className="cursor-pointer">
-        O Y
-      </Logo>
+      <div onClick={handleHomeClick} className="cursor-pointer">
+        <img
+          className="h-13 w-13"
+          src={isDarkMode ? darkLogo : lightLogo}
+          alt="logo"
+        />
+      </div>
       <NavLinks>
         {navItems.map((item) => (
           <NavLink
             key={item.path}
             to={item.path}
             onClick={() => scrollToSection(item.label)}
+            className="text-xl"
           >
             {item.label.toUpperCase()}
           </NavLink>
@@ -67,7 +68,7 @@ const Navbar = () => {
           <DarkModeToggle
             checked={isDarkMode}
             onChange={() => setIsDarkMode((prev) => !prev)}
-            size={55}
+            size={70}
             speed={2}
           />
         </DesktopControls>
