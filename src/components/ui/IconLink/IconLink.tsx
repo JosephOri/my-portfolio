@@ -20,6 +20,7 @@ const IconLink = ({ href, Icon, label, size = "inherit" }: Props) => {
       color="inherit"
       itemProp="sameAs"
       target="_blank"
+      title={label}
     >
       <StyledButton
         aria-label={label}
