@@ -44,6 +44,7 @@ const projects: Project[] = [
     imageUrl: weatherApp,
     techStack: ["React", "OpenWeatherMap API", "Context API"],
     githubUrl: "https://github.com/josephori/Weather-app",
+    liveUrl: "https://weather-app-josephori.netlify.app/",
   },
   {
     title: "React AI Chatbot",
