@@ -43,7 +43,6 @@ const MobileControls = styled.div`
 const Navbar = () => {
   const { isDarkMode, setIsDarkMode } = useThemeMode();
   const { navItems, scrollToSection, handleHomeClick } = useScrollNavigation();
-  const { theme } = useThemeMode();
   return (
     <Nav>
       <div onClick={handleHomeClick} className="cursor-pointer">
