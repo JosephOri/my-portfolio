@@ -6,6 +6,8 @@ import aiChatbot from "@assets/ai-chatbot.png";
 import stoicReads from "@assets/stoic-reads.png";
 import programmerImage from "@assets/programmer2.svg";
 import oriImage from "@assets/ori-image.jpeg";
+import shekelMaster from "@assets/shekel-master.png";
+
 const links = {
   linkedin: "https://www.linkedin.com/in/ori-joseph-45o/",
   github: "https://github.com/josephori",
@@ -45,6 +47,15 @@ const projects: Project[] = [
     techStack: ["React", "OpenWeatherMap API", "Context API"],
     githubUrl: "https://github.com/josephori/Weather-app",
     liveUrl: "https://weather-app-josephori.netlify.app/",
+  },
+  {
+    title: "Shekel Master",
+    description:
+      "a personal finance app that allows users to track their expenses and income, and visualize their financial data in a user-friendly interface.",
+    imageUrl: shekelMaster,
+    techStack: ["Next.js", "Prisma", "CSS", "PostgreSQL"],
+    githubUrl: "https://github.com/josephori/Shekel-Master",
+    liveUrl: "https://shekel-master.netlify.app/",
   },
   {
     title: "React AI Chatbot",
