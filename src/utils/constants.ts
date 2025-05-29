@@ -40,15 +40,6 @@ const projects: Project[] = [
     demoUrl: "https://www.youtube.com/watch?v=TeoeFkO_GTg",
   },
   {
-    title: "Weather App",
-    description:
-      "a weather app that allows users to search for weather information for a specific city, and displays the weather information in a user-friendly interface.",
-    imageUrl: weatherApp,
-    techStack: ["React", "OpenWeatherMap API", "Context API"],
-    githubUrl: "https://github.com/josephori/Weather-app",
-    liveUrl: "https://weather-app-josephori.netlify.app/",
-  },
-  {
     title: "Shekel Master",
     description:
       "a personal finance app that allows users to track their expenses and income, and visualize their financial data in a user-friendly interface.",
@@ -57,6 +48,16 @@ const projects: Project[] = [
     githubUrl: "https://github.com/josephori/Shekel-Master",
     liveUrl: "https://shekel-master.netlify.app/",
   },
+  {
+    title: "Weather App",
+    description:
+      "a weather app that allows users to search for weather information for a specific city, and displays the weather information in a user-friendly interface.",
+    imageUrl: weatherApp,
+    techStack: ["React", "OpenWeatherMap API", "Context API"],
+    githubUrl: "https://github.com/josephori/Weather-app",
+    liveUrl: "https://weather-app-josephori.netlify.app/",
+  },
+
   {
     title: "React AI Chatbot",
     description:
