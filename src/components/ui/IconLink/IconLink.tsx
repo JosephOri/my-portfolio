@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import React from "react";
+import { useThemeMode } from "@/context/hooks/useThemeMode";
 
 interface Props {
   href: string;
@@ -8,11 +8,8 @@ interface Props {
   size?: "small" | "medium" | "large" | "inherit";
 }
 
-const StyledButton = styled.button`
-  color: ${({ theme }) => theme.textPrimary};
-`;
-
 const IconLink = ({ href, Icon, label, size = "inherit" }: Props) => {
+  const { theme } = useThemeMode();
   return (
     <a
       href={href}
@@ -21,14 +18,11 @@ const IconLink = ({ href, Icon, label, size = "inherit" }: Props) => {
       itemProp="sameAs"
       target="_blank"
       title={label}
+      style={{ color: theme.iconBg }}
     >
-      <StyledButton
-        aria-label={label}
-        aria-haspopup="true"
-        className="mx-2 cursor-pointer bg-transparent text-inherit"
-      >
+      <button aria-label={label} aria-haspopup="true" className="mx-2 cursor-pointer">
         <Icon fontSize={size} />
-      </StyledButton>
+      </button>
     </a>
   );
 };

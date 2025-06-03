@@ -18,6 +18,7 @@ export interface Theme extends DefaultTheme {
   buttonHoverBg: string;
   success: string;
   error: string;
+  iconBg: string;
 }
 
 export const lightTheme: Theme = {
@@ -38,6 +39,7 @@ export const lightTheme: Theme = {
   buttonHoverBg: "#1d4ed8",
   success: "#22c55e",
   error: "#ef4444",
+  iconBg: "#000000",
 };
 
 export const darkTheme: Theme = {
@@ -58,4 +60,5 @@ export const darkTheme: Theme = {
   buttonHoverBg: "#4d85bb",
   success: "#16a34a",
   error: "#dc2626",
+  iconBg: "#FFFFFF",
 };
