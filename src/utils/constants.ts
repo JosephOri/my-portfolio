@@ -7,6 +7,7 @@ import stoicReads from "@assets/stoic-reads.png";
 import programmerImage from "@assets/programmer2.svg";
 import oriImage from "@assets/ori-image.jpeg";
 import shekelMaster from "@assets/shekel-master.png";
+import josephStore from "@assets/joseph-store.png";
 
 const links = {
   linkedin: "https://www.linkedin.com/in/ori-joseph-45o/",
@@ -57,7 +58,16 @@ const projects: Project[] = [
     githubUrl: "https://github.com/josephori/Weather-app",
     liveUrl: "https://weather-app-josephori.netlify.app/",
   },
-
+  {
+    title: "Joseph Store",
+    description:
+      "an e-commerce website for a generic store that can be reused as a real-world e-commerce platform, allowing users to browse and purchase products, and manage their shopping cart and payment information.",
+    imageUrl: josephStore,
+    techStack: ["Next.js", "NextAuth", "Extensive Payment Integrations", "Shadcn UI"],
+    githubUrl: "https://github.com/JosephOri/joseph-store",
+    liveUrl: "https://joseph-store.vercel.app/",
+    comingSoon: true,
+  },
   {
     title: "React AI Chatbot",
     description:
@@ -70,8 +80,7 @@ const projects: Project[] = [
   },
   {
     title: "Google Flights Clone",
-    description:
-      "a clone of the Google Flights website, allowing users to search for flights and book them.",
+    description: "a clone of the Google Flights website, allowing users to search for flights and book them.",
     imageUrl: googleFlightsClone,
     techStack: ["Next.js", "Tailwind CSS", "RapidAPI"],
     githubUrl: "https://github.com/josephori/google-flights-clone",

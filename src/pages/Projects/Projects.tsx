@@ -24,6 +24,7 @@ const Projects = () => {
             githubUrl={project.githubUrl}
             demoUrl={project.demoUrl}
             liveUrl={project.liveUrl}
+            comingSoon={project.comingSoon}
           />
         ))}
       </div>

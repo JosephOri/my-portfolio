@@ -6,6 +6,7 @@ type Project = {
   githubUrl: string;
   demoUrl?: string;
   liveUrl?: string;
+  comingSoon?: boolean;
 };
 
 export type { Project };
