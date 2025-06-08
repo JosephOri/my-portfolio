@@ -25,6 +25,7 @@ const Projects = () => {
             demoUrl={project.demoUrl}
             liveUrl={project.liveUrl}
             comingSoon={project.comingSoon}
+            fixingBugs={project.fixingBugs}
           />
         ))}
       </div>

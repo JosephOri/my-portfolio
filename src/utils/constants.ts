@@ -67,6 +67,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/JosephOri/joseph-store",
     liveUrl: "https://joseph-store.vercel.app/",
     comingSoon: true,
+    fixingBugs: true,
   },
   {
     title: "React AI Chatbot",

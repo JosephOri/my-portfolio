@@ -1,23 +1,14 @@
-import { FC } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { useThemeMode } from "@context/hooks/useThemeMode";
 import IconLink from "../ui/IconLink/IconLink";
 import { H1, Paragraph } from "../ui";
+import { Project } from "@/utils/types";
 
-interface Props {
-  title: string;
-  description: string;
-  imageUrl: string;
-  techStack: string[];
-  githubUrl: string;
-  demoUrl?: string;
-  liveUrl?: string;
-  comingSoon?: boolean;
-}
+type Props = Project;
 
-const ProjectCard: FC<Props> = ({
+const ProjectCard = ({
   title,
   description,
   imageUrl,
@@ -26,7 +17,8 @@ const ProjectCard: FC<Props> = ({
   demoUrl,
   liveUrl,
   comingSoon = false,
-}) => {
+  fixingBugs = false,
+}: Props) => {
   const { theme } = useThemeMode();
 
   return (
@@ -46,17 +38,30 @@ const ProjectCard: FC<Props> = ({
         <H1 className="mb-2 text-2xl font-bold" style={{ color: theme.headerPrimary }}>
           {title}
         </H1>
-        {comingSoon && (
-          <span
-            className="flex w-fit rounded-full px-3 py-1 text-sm font-semibold"
-            style={{
-              backgroundColor: "#ff8282",
-              color: theme.tagText,
-            }}
-          >
-            Coming soon...
-          </span>
-        )}
+        <div className="flex flex-row gap-2">
+          {comingSoon && (
+            <span
+              className="flex w-fit rounded-full px-3 py-1 text-sm font-semibold"
+              style={{
+                backgroundColor: "#ffec82",
+                color: theme.tagText,
+              }}
+            >
+              Coming soon...
+            </span>
+          )}
+          {fixingBugs && (
+            <span
+              className="flex w-fit rounded-full px-3 py-1 text-sm font-semibold"
+              style={{
+                backgroundColor: "#ff8282",
+                color: theme.tagText,
+              }}
+            >
+              Fixing Bugs
+            </span>
+          )}
+        </div>
 
         <Paragraph className="mb-4 flex-1 text-lg" style={{ color: theme.textSecondary }}>
           {description}

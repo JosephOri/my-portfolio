@@ -7,6 +7,7 @@ type Project = {
   demoUrl?: string;
   liveUrl?: string;
   comingSoon?: boolean;
+  fixingBugs?: boolean;
 };
 
 export type { Project };
