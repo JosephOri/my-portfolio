@@ -5,6 +5,7 @@ import { useThemeMode } from "@context/hooks/useThemeMode";
 import IconLink from "../ui/IconLink/IconLink";
 import { H1, Paragraph } from "../ui";
 import { Project } from "@/utils/types";
+import Tag from "../ui/Banner/Banner";
 
 type Props = Project;
 
@@ -35,57 +36,53 @@ const ProjectCard = ({
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <H1 className="mb-2 text-2xl font-bold" style={{ color: theme.headerPrimary }}>
+        <H1
+          className="mb-2 text-2xl font-bold"
+          style={{ color: theme.headerPrimary }}
+        >
           {title}
         </H1>
         <div className="flex flex-row gap-2">
-          {comingSoon && (
-            <span
-              className="flex w-fit rounded-full px-3 py-1 text-sm font-semibold"
-              style={{
-                backgroundColor: "#ffec82",
-                color: theme.tagText,
-              }}
-            >
-              Coming soon...
-            </span>
-          )}
-          {fixingBugs && (
-            <span
-              className="flex w-fit rounded-full px-3 py-1 text-sm font-semibold"
-              style={{
-                backgroundColor: "#ff8282",
-                color: theme.tagText,
-              }}
-            >
-              Fixing Bugs
-            </span>
-          )}
+          {comingSoon && <Tag text="Coming Soon..." color="yellow" />}
+          {fixingBugs && <Tag text="Fixing Bugs" color="red" />}
         </div>
 
-        <Paragraph className="mb-4 flex-1 text-lg" style={{ color: theme.textSecondary }}>
+        <Paragraph
+          className="mb-4 flex-1 text-lg"
+          style={{ color: theme.textSecondary }}
+        >
           {description}
         </Paragraph>
 
         <div className="mb-4 flex flex-wrap gap-2">
           {techStack.map((tech) => (
-            <span
-              key={tech}
-              className="rounded-full px-3 py-1 text-sm font-semibold"
-              style={{
-                backgroundColor: theme.tagBg,
-                color: theme.tagText,
-              }}
-            >
-              {tech}
-            </span>
+            <Tag key={tech} text={tech} />
           ))}
         </div>
 
         <div className="flex gap-4">
-          <IconLink href={githubUrl} Icon={GitHubIcon} label="Github" size="large" />
-          {demoUrl && <IconLink href={demoUrl} Icon={PlayCircleIcon} label="Demo" size="large" />}
-          {liveUrl && <IconLink href={liveUrl} Icon={OpenInNewIcon} label="Live" size="large" />}
+          <IconLink
+            href={githubUrl}
+            Icon={GitHubIcon}
+            label="Github"
+            size="large"
+          />
+          {demoUrl && (
+            <IconLink
+              href={demoUrl}
+              Icon={PlayCircleIcon}
+              label="Demo"
+              size="large"
+            />
+          )}
+          {liveUrl && (
+            <IconLink
+              href={liveUrl}
+              Icon={OpenInNewIcon}
+              label="Live"
+              size="large"
+            />
+          )}
         </div>
       </div>
     </div>
