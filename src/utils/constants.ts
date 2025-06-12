@@ -63,11 +63,15 @@ const projects: Project[] = [
     description:
       "an e-commerce website for a generic store that can be reused as a real-world e-commerce platform, allowing users to browse and purchase products, and manage their shopping cart and payment information.",
     imageUrl: josephStore,
-    techStack: ["Next.js", "NextAuth", "Extensive Payment Integrations", "Shadcn UI"],
+    techStack: [
+      "Next.js",
+      "NextAuth",
+      "Extensive Payment Integrations",
+      "Shadcn UI",
+    ],
     githubUrl: "https://github.com/JosephOri/joseph-store",
     liveUrl: "https://joseph-store.vercel.app/",
     comingSoon: true,
-    fixingBugs: true,
   },
   {
     title: "React AI Chatbot",
@@ -81,7 +85,8 @@ const projects: Project[] = [
   },
   {
     title: "Google Flights Clone",
-    description: "a clone of the Google Flights website, allowing users to search for flights and book them.",
+    description:
+      "a clone of the Google Flights website, allowing users to search for flights and book them.",
     imageUrl: googleFlightsClone,
     techStack: ["Next.js", "Tailwind CSS", "RapidAPI"],
     githubUrl: "https://github.com/josephori/google-flights-clone",
