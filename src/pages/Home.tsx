@@ -15,8 +15,10 @@ const Home = () => {
       <div className="grid grid-cols-1 items-center justify-between gap-9 md:grid-cols-2">
         <div>
           <H1 color={theme.headerPrimary} className="mb-7 text-2xl lg:text-6xl">
-            Hi, I'm <span className="text-teal-400">Ori </span>
-            <br />A Full Stack developer
+            <p className="mb-3">
+              Hi, I'm <span style={{ color: theme.headerSecondary }}>Ori </span>
+            </p>
+            <p>A Full Stack developer</p>
           </H1>
           <Paragraph
             color={theme.textPrimary}
