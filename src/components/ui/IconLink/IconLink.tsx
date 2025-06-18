@@ -20,7 +20,11 @@ const IconLink = ({ href, Icon, label, size = "inherit" }: Props) => {
       title={label}
       style={{ color: theme.iconBg }}
     >
-      <button aria-label={label} aria-haspopup="true" className="mx-2 cursor-pointer">
+      <button
+        aria-label={label}
+        aria-haspopup="true"
+        className="mx-2 cursor-pointer"
+      >
         <Icon fontSize={size} />
       </button>
     </a>

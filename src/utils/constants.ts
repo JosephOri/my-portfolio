@@ -26,7 +26,7 @@ const projects: Project[] = [
     description:
       "a platform for support staff to transform customer interactions into polished AI-generated guides (powered by OpenAI), reducing manual effort and ensuring consistent documentation.",
     imageUrl: supportaiChatDashboard,
-    techStack: ["Next.js", "Nest.js", "Docker", "PostgreSQL"],
+    techStack: ["React", "Nest.js", "Docker", "PostgreSQL"],
     githubUrl: "https://github.com/SupportAI-Project/SupportAI",
     demoUrl:
       "https://www.canva.com/design/DAGoQOVuP8E/FKLiNfg6HMvnT_mJivBD-Q/watch?utm_content=DAGoQOVuP8E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6844b85385",
@@ -38,9 +38,11 @@ const projects: Project[] = [
     imageUrl: josephStore,
     techStack: [
       "Next.js",
+      "Prisma",
       "NextAuth",
-      "Extensive Payment Integrations",
+      "PayPal & Stripe API",
       "Shadcn UI",
+      "Tailwind",
     ],
     githubUrl: "https://github.com/JosephOri/joseph-store",
     liveUrl: "https://joseph-store.vercel.app/",
@@ -54,15 +56,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/JosephOri/StoicReads?tab=readme-ov-file",
     demoUrl: "https://www.youtube.com/watch?v=TeoeFkO_GTg",
   },
-  {
-    title: "Shekel Master",
-    description:
-      "a personal finance app that allows users to track their expenses and income, and visualize their financial data in a user-friendly interface.",
-    imageUrl: shekelMaster,
-    techStack: ["Next.js", "Prisma", "CSS", "PostgreSQL"],
-    githubUrl: "https://github.com/josephori/Shekel-Master",
-    liveUrl: "https://shekel-master.netlify.app/",
-  },
+
   {
     title: "Weather App",
     description:
@@ -71,6 +65,15 @@ const projects: Project[] = [
     techStack: ["React", "OpenWeatherMap API", "Context API"],
     githubUrl: "https://github.com/josephori/Weather-app",
     liveUrl: "https://weather-app-josephori.netlify.app/",
+  },
+  {
+    title: "Shekel Master",
+    description:
+      "a personal finance app that allows users to track their expenses and income, and visualize their financial data in a user-friendly interface.",
+    imageUrl: shekelMaster,
+    techStack: ["Next.js", "Prisma", "CSS", "PostgreSQL"],
+    githubUrl: "https://github.com/josephori/Shekel-Master",
+    liveUrl: "https://shekel-master.netlify.app/",
   },
 
   {

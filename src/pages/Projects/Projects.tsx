@@ -10,23 +10,13 @@ const Projects = () => {
     <Section id="projects" className="mt-20 flex flex-col">
       <br />
       <br />
+      <br />
       <H1 className="mb-10 text-6xl" color={theme.headerSecondary}>
         My Projects
       </H1>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            imageUrl={project.imageUrl}
-            techStack={project.techStack}
-            githubUrl={project.githubUrl}
-            demoUrl={project.demoUrl}
-            liveUrl={project.liveUrl}
-            comingSoon={project.comingSoon}
-            fixingBugs={project.fixingBugs}
-          />
+          <ProjectCard key={project.title} project={project} />
         ))}
       </div>
     </Section>

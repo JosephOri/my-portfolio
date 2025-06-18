@@ -7,19 +7,11 @@ import { H1, Paragraph } from "../ui";
 import { Project } from "@/utils/types";
 import Tag from "../ui/Banner/Banner";
 
-type Props = Project;
+type Props = {
+  project: Project;
+};
 
-const ProjectCard = ({
-  title,
-  description,
-  imageUrl,
-  techStack,
-  githubUrl,
-  demoUrl,
-  liveUrl,
-  comingSoon = false,
-  fixingBugs = false,
-}: Props) => {
+const ProjectCard = ({ project }: Props) => {
   const { theme } = useThemeMode();
 
   return (
@@ -29,8 +21,8 @@ const ProjectCard = ({
     >
       <div className="w-full overflow-hidden">
         <img
-          src={imageUrl}
-          alt={title}
+          src={project.imageUrl}
+          alt={project.title}
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
       </div>
@@ -40,44 +32,44 @@ const ProjectCard = ({
           className="mb-2 text-2xl font-bold"
           style={{ color: theme.headerPrimary }}
         >
-          {title}
+          {project.title}
         </H1>
         <div className="flex flex-row gap-2">
-          {comingSoon && <Tag text="Coming Soon..." color="yellow" />}
-          {fixingBugs && <Tag text="Fixing Bugs" color="red" />}
+          {project.comingSoon && <Tag text="Coming Soon..." color="yellow" />}
+          {project.fixingBugs && <Tag text="Fixing Bugs" color="red" />}
         </div>
 
         <Paragraph
           className="mb-4 flex-1 text-lg"
-          style={{ color: theme.textSecondary }}
+          style={{ color: theme.textPrimary }}
         >
-          {description}
+          {project.description}
         </Paragraph>
 
         <div className="mb-4 flex flex-wrap gap-2">
-          {techStack.map((tech) => (
+          {project.techStack.map((tech) => (
             <Tag key={tech} text={tech} />
           ))}
         </div>
 
         <div className="flex gap-4">
           <IconLink
-            href={githubUrl}
+            href={project.githubUrl}
             Icon={GitHubIcon}
             label="Github"
             size="large"
           />
-          {demoUrl && (
+          {project.demoUrl && (
             <IconLink
-              href={demoUrl}
+              href={project.demoUrl}
               Icon={PlayCircleIcon}
               label="Demo"
               size="large"
             />
           )}
-          {liveUrl && (
+          {project.liveUrl && (
             <IconLink
-              href={liveUrl}
+              href={project.liveUrl}
               Icon={OpenInNewIcon}
               label="Live"
               size="large"
