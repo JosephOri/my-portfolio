@@ -26,7 +26,16 @@ const projects: Project[] = [
     description:
       "a platform for support staff to transform customer interactions into polished AI-generated guides (powered by OpenAI), reducing manual effort and ensuring consistent documentation.",
     imageUrl: supportaiChatDashboard,
-    techStack: ["React", "Nest.js", "Docker", "PostgreSQL"],
+    techStack: [
+      "TypeScript",
+      "React",
+      "Nest.js",
+      "Docker",
+      "PostgreSQL",
+      "Material-UI",
+      "OpenAI API",
+      "Socket.io",
+    ],
     githubUrl: "https://github.com/SupportAI-Project/SupportAI",
     demoUrl:
       "https://www.canva.com/design/DAGoQOVuP8E/FKLiNfg6HMvnT_mJivBD-Q/watch?utm_content=DAGoQOVuP8E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6844b85385",
@@ -37,6 +46,7 @@ const projects: Project[] = [
       "an e-commerce website for a generic store that can be reused as a real-world e-commerce platform, allowing users to browse and purchase products, and manage their shopping cart and payment information.",
     imageUrl: josephStore,
     techStack: [
+      "TypeScript",
       "Next.js",
       "Prisma",
       "NextAuth",
@@ -52,7 +62,14 @@ const projects: Project[] = [
     description:
       "a vibrant social media platform where book lovers can share detailed reviews, discuss their favorite reads, and discover new literary gems through engaging community interactions.",
     imageUrl: stoicReads,
-    techStack: ["React", "Express", "MongoDB", "Material-UI"],
+    techStack: [
+      "TypeScript",
+      "React",
+      "Express",
+      "MongoDB",
+      "PM2",
+      "Material-UI",
+    ],
     githubUrl: "https://github.com/JosephOri/StoicReads?tab=readme-ov-file",
     demoUrl: "https://www.youtube.com/watch?v=TeoeFkO_GTg",
   },
@@ -62,7 +79,7 @@ const projects: Project[] = [
     description:
       "a weather app that allows users to search for weather information for a specific city, and displays the weather information in a user-friendly interface.",
     imageUrl: weatherApp,
-    techStack: ["React", "OpenWeatherMap API", "Context API"],
+    techStack: ["TypeScript", "React", "OpenWeatherMap API", "Context API"],
     githubUrl: "https://github.com/josephori/Weather-app",
     liveUrl: "https://weather-app-josephori.netlify.app/",
   },
@@ -71,7 +88,7 @@ const projects: Project[] = [
     description:
       "a personal finance app that allows users to track their expenses and income, and visualize their financial data in a user-friendly interface.",
     imageUrl: shekelMaster,
-    techStack: ["Next.js", "Prisma", "CSS", "PostgreSQL"],
+    techStack: ["JavaScript", "Next.js", "Prisma", "CSS", "PostgreSQL"],
     githubUrl: "https://github.com/josephori/Shekel-Master",
     liveUrl: "https://shekel-master.netlify.app/",
   },
