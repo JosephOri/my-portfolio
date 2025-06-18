@@ -4,8 +4,7 @@ import { NavLink, NavLinks } from "./NavLink.styled";
 import styled from "styled-components";
 import MobileNav from "./MobileNav";
 import { useScrollNavigation } from "../../context/hooks/useScrollNavigation";
-import darkLogo from "@assets/favicon-dark.ico";
-import lightLogo from "@assets/favicon-light.ico";
+import { H1 } from "../ui";
 
 const Nav = styled.nav`
   display: flex;
@@ -43,14 +42,13 @@ const MobileControls = styled.div`
 const Navbar = () => {
   const { isDarkMode, setIsDarkMode } = useThemeMode();
   const { navItems, scrollToSection, handleHomeClick } = useScrollNavigation();
+  const { theme } = useThemeMode();
   return (
     <Nav>
       <div onClick={handleHomeClick} className="cursor-pointer">
-        <img
-          className="lg:h-13 lg:w-13"
-          src={isDarkMode ? darkLogo : lightLogo}
-          alt="logo"
-        />
+        <H1 color={theme.headerSecondary} className="text-4xl">
+          O Y
+        </H1>
       </div>
       <NavLinks>
         {navItems.map((item) => (
