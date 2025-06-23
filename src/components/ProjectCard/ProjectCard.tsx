@@ -3,7 +3,7 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { useThemeMode } from "@context/hooks/useThemeMode";
 import IconLink from "../ui/IconLink/IconLink";
-import { H1, Paragraph } from "../ui";
+import { Paragraph, H1 } from "../ui";
 import { Project } from "@/utils/types";
 import Tag from "../ui/Banner/Banner";
 
@@ -28,10 +28,7 @@ const ProjectCard = ({ project }: Props) => {
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <H1
-          className="mb-2 text-2xl font-bold"
-          style={{ color: theme.headerPrimary }}
-        >
+        <H1 className="mb-2 text-2xl font-bold" color={theme.headerPrimary}>
           {project.title}
         </H1>
         <div className="flex flex-row gap-2">

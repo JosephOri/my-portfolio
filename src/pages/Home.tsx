@@ -5,8 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import IconLink from "../components/ui/IconLink/IconLink";
 import { useThemeMode } from "../context/hooks/useThemeMode";
-import { H1 } from "../components/ui/H1/H1";
-import { Paragraph } from "../components/ui";
+import { Paragraph, H1 } from "../components/ui";
 
 const Home = () => {
   const { theme } = useThemeMode();
