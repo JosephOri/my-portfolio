@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Loader } from "./Loader";
 import { ThemeProvider } from "styled-components";
-import { lightTheme } from "../theme/theme";
+import { lightTheme } from "../../../theme/theme";
 
 const meta: Meta<typeof Loader> = {
   title: "Components/Loader",
