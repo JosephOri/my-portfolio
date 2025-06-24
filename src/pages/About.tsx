@@ -8,8 +8,11 @@ const About = () => {
   return (
     <Section id="about" className="flex flex-col justify-center text-xl">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div>
-          <H1 className="text-2xl lg:text-6xl" color={theme.headerSecondary}>
+        <div className="flex flex-col justify-center">
+          <H1
+            className="text-left text-2xl lg:text-6xl"
+            color={theme.headerSecondary}
+          >
             Who Am I
           </H1>
           <br />
