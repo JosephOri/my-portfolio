@@ -47,7 +47,7 @@ const ProjectCard = ({ project }: Props) => {
         </div>
 
         <Paragraph
-          className="mb-4 flex-1 text-lg"
+          className="mb-4 flex-1 font-sans text-lg"
           style={{ color: theme.textPrimary }}
         >
           {project.description}
