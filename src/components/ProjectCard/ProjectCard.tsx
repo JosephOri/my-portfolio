@@ -20,11 +20,18 @@ const ProjectCard = ({ project }: Props) => {
       style={{ backgroundColor: theme.cardBg }}
     >
       <div className="w-full overflow-hidden">
-        <img
-          src={project.imageUrl}
-          alt={project.title}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-        />
+        <button
+          className="cursor-pointer"
+          onClick={() =>
+            window.open(project.liveUrl || project.githubUrl || "", "_blank")
+          }
+        >
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        </button>
       </div>
 
       <div className="flex flex-1 flex-col p-6">
